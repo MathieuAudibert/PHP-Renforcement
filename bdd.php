@@ -13,5 +13,3 @@ try {
     echo "Pas connecté ";
 }
 return $bdd;
-
-?>

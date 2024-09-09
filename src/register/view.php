@@ -1,5 +1,5 @@
 <?php
-function view_login()
+function view_register()
 {
 ?>
     <!DOCTYPE html>
@@ -16,14 +16,14 @@ function view_login()
         <header>
             <ul class="UlHeader">
                 <span class="LeftNavNoConnect">
-                    <li><a href="#"><img id="Logo" src="https://static.vecteezy.com/system/resources/previews/013/442/219/original/blank-cd-or-dvd-disc-png.png"></a></li>
+                    <li><a href="/"><img id="Logo" src="https://static.vecteezy.com/system/resources/previews/013/442/219/original/blank-cd-or-dvd-disc-png.png"></a></li>
                     <li><a href="#">Bibliothèque</a></li>
                     <li><a href="#">Playlist</a></li>
                     <li><a href="#">Artistes</a></li>
                     <li><a href="#">À propos</a></li>
                 </span>
                 <span class="RightNavNoConnect">
-                    <li><a href="#" id="prenomheader">VotreNom, VotrePrenom</a></li>
+                    <li><a href="/login" id="connexion">Connexion</a></li>
                 </span>
             </ul>
             <hr>
@@ -31,19 +31,22 @@ function view_login()
 
         <main>
             <style>
-                <?php include 'style.css'; ?>
+                <?php include './src/style.css'; ?>
             </style>
             <div class="middle_container">
-                <h1>Connexion</h1>
+                <h1>Inscription</h1>
                 <br>
-                <form action="" method="post">
+                <form action="" method="POST">
+                    <label for="pseudo">Pseudo :</label>
+                    <input type="text" name="pseudo" id="pseudo" required>
+
                     <label for="email">Email :</label>
                     <input type="text" name="email" id="email" required>
 
                     <label for="password">Mot de passe :</label>
                     <input type="password" name="password" id="password" required>
 
-                    <button type="submit" value="Se connecter">Se connecter</button>
+                    <button type="submit" name="submit" value="Se connecter">Se connecter</button>
                 </form>
             </div>
         </main>

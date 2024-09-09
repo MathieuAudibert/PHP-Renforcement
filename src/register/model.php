@@ -1,9 +1,6 @@
 <?php
-function model_login()
+function model_register()
 {
-    if ($_POST['email'] === 'oui@oui.com' && $_POST['password'] === 'oui') {
-        return true;  // Connexion réussie
-    } else {
-        throw new Exception('Email ou mot de passe incorrect');
-    }
+    $email = $_POST["email"];
+    $password = $_POST["password"];
 }

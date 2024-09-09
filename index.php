@@ -1,8 +1,8 @@
 <?php
+require_once('./bdd.php');
 require_once('./src/homepage/controller.php');
+require_once('./src/login/controller.php');
 require_once('./src/register/controller.php');
-
-
 
 function route_request()
 {
@@ -11,10 +11,12 @@ function route_request()
             case '/':
                 controller_homepage();
                 break;
-            case '/register':
+            case '/login':
                 controller_login();
                 break;
-            default:
+            case '/register':
+                controller_register();
+                break;
         }
     }
 }

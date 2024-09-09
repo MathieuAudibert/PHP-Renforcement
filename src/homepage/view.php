@@ -16,14 +16,15 @@ function view_homepage()
         <header>
             <ul class="UlHeader">
                 <span class="LeftNavNoConnect">
-                    <li><a href="#"><img id="Logo" src="https://static.vecteezy.com/system/resources/previews/013/442/219/original/blank-cd-or-dvd-disc-png.png"></a></li>
+                    <li><a href="/"><img id="Logo" src="https://static.vecteezy.com/system/resources/previews/013/442/219/original/blank-cd-or-dvd-disc-png.png"></a></li>
                     <li><a href="#">Bibliothèque</a></li>
                     <li><a href="#">Playlist</a></li>
                     <li><a href="#">Artistes</a></li>
                     <li><a href="#">À propos</a></li>
                 </span>
                 <span class="RightNavNoConnect">
-                    <li><a href="#" id="prenomheader">VotreNom, VotrePrenom</a></li>
+                    <li><a href="/register" id="inscription">Inscription</a></li>
+                    <li><a href="/login" id="connexion">Connexion</a></li>
                 </span>
             </ul>
             <hr>
@@ -31,7 +32,7 @@ function view_homepage()
 
         <main>
             <style>
-                <?php include 'style.css'; ?>
+                <?php include './src/style.css'; ?>
             </style>
             <p>OUI</p>
         </main>
