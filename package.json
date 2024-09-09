@@ -1,0 +1,14 @@
+{
+  "name": "php-renforcement",
+  "version": "1.0.0",
+  "description": "Audiora est une plateforme de streaming musicale développé lors d'un projet de renforcement php.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "docker": "^1.0.0"
+  }
+}
