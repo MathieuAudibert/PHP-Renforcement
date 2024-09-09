@@ -1,2 +1,2 @@
-# PHP-Renforcement
-Projet de "validation" de renforcement en PHP
+# 
+Ce projet php a pour but de simuler une application web bancaire.
