@@ -12,6 +12,8 @@ try {
     echo $e->getMessage();
     echo "Pas connecté ";
 }
-return $bdd;
 
+$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+return $bdd;
 ?>
