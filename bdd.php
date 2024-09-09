@@ -1,14 +1,11 @@
 <?php
-require_once __DIR__ . '/vendor/autoload.php';
+require_once('./cred.env');
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
-
-$host = $_ENV['host'];
+$host = $_ENV['DB_HOST'];
 $port = 5432;
-$dbname = $_ENV['bdd'];
-$user = $_ENV['user'];
-$password = $_ENV['passwd'];
+$dbname = $_ENV['DB_NAME'];
+$user = $_ENV['DB_USER'];
+$password = $_ENV['DB_PASS'];
 
 try {
     $dsn = "pgsql:host=$host;port=$port;dbname=$dbname";
