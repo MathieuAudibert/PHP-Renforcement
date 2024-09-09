@@ -8,10 +8,11 @@ $user = $_ENV['DB_USER'];
 $password = $_ENV['DB_PASS'];
 
 try {
-    $dsn = "pgsql:host=$host;port=$port;dbname=$dbname";
-    $pdo = new PDO($dsn, $user, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
+    $bdd = new PDO("pgsql:host={$host};port=5432;dbname={$dbname}, {$user}, {$password}");
 } catch (PDOException $e) {
-    echo "Connexion échouée: " . $e->getMessage();
+    echo $e->getMessage();
+    echo "Pas connecté ";
 }
+return $bdd;
+
+?>
