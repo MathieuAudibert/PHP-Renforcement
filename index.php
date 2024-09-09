@@ -1,5 +1,4 @@
 <?php
-require_once('./bdd.php');
 require_once('./src/homepage/controller.php');
 require_once('./src/login/controller.php');
 require_once('./src/register/controller.php');
