@@ -1,5 +1,5 @@
-# Nom du projet
+# Audiora
 
-Ce projet php ....
+Audiora est une plateforme de streaming musicale développé lors d'un projet de renforcement php.
 
 # Contact
