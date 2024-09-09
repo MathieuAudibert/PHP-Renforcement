@@ -1,5 +1,4 @@
 <?php
-$message = "Salut les amis";
 $email = isset($_POST["email"]) ? htmlspecialchars($_POST["email"]) : '';
 $password = isset($_POST["password"]) ? htmlspecialchars($_POST["password"]) : '';
 ?>
@@ -12,20 +11,41 @@ $password = isset($_POST["password"]) ? htmlspecialchars($_POST["password"]) : '
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire de connexion</title>
-    <div class="image-background"></div>
 </head>
 
 <body>
 
-    <?php if ($message !== null) { ?>
-        <h1><?= $message ?></h1>
-    <?php } ?>
+    <header>
+        <ul class=UlHeader>
+            <span class=LeftNavNoConnect>
+                <li><a href=#><img id=Logo src=https://static.vecteezy.com/system/resources/previews/013/442/219/original/blank-cd-or-dvd-disc-png.png></a></li>
+                <li><a href=#>Bibliothèque</a></li>
+                <li><a href=#>Playlist</a></li>
+                <li><a href=#>Artistes</a></li>
+                <li><a href=#>À propos</a></li>
+            </span>
+            <span class=RightNavNoConnect>
+                <li> <a href=# id=prenomheader>$nom, $prenom </a>
+            </span>
+        </ul>
+        <hr>
+    </header>
 
-    <form action="" method="POST">
-        <input name="email" type="email" placeholder="Entrez votre email" value="<?= $email ?>">
-        <input name="password" type="password" placeholder="Entrez votre mot de passe" value="<?= $password ?>">
-        <button type="submit">Valider</button>
-    </form>
+    <main>
+        <div class="middle_container">
+            <h1>Connexion</h1>
+            <br>
+            <form action="" method="post">
+                <label for="email">Email :</label>
+                <input type="text" name="email" id="email" required>
+
+                <label for="password">Mot de passe :</label>
+                <input type="password" name="password" id="password" required>
+
+                <button type="submit" value="Se connecter">Se connecter</button>
+            </form>
+        </div>
+    </main>
 
 </body>
 
