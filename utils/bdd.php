@@ -20,7 +20,8 @@ class Database {
 
     private function __construct() {
 
-        $dotenv = Dotenv::createImmutable(__DIR__ . '/../../'); // obligé d'utiliser __DIR__ meme si j'ai essayé de veski
+        $dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
+ // obligé d'utiliser __DIR__ meme si j'ai essayé de veski
         $dotenv->load();
 
         $this->host = $_ENV['DB_HOST'];

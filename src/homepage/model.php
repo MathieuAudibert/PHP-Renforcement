@@ -5,7 +5,7 @@ class MusiqueModel {
     private PDO $pdo;
 
     public function __construct() {
-        $this->pdo = Database::connect();
+        $this->pdo = Database::getInstance()->getConnection();
     }
 
     public function getAllMusiques(): array {
