@@ -1,33 +1,61 @@
 <?php
 
-declare(strict_types=1);
+require_once ('/../../vendor/autoload.php');
 
-require_once ('../.env');
+use Dotenv\Dotenv;
+
+// J'ai essayé le singleton si ca passe c insane 
 
 class Database {
-    private static ?Database $instance = null;
-    private PDO $connexion;
+    private static $instance = null;
+    private $conn;
+
+    private $host;
+    private $port;
+    private $dbname;
+    private $user;
+    private $pass;
+    private $logFile;
 
     private function __construct() {
-        global $host, $user, $dbname, $dbpassword;
+
+        $dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
+        $dotenv->load();
+
+        $this->host = $_ENV['DB_HOST'];
+        $this->port = $_ENV['DB_PORT'];
+        $this->dbname = $_ENV['DB_NAME'];
+        $this->user = $_ENV['DB_USER'];
+        $this->pass = $_ENV['DB_PASS'];
+        $this->logFile = $_ENV['LOG_FILE'];
+
         try {
-            $this->connexion = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $dbpassword);
-            $this->connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $this->conn = new PDO(
+                "pgsql:host={$this->host};port={$this->port};dbname={$this->dbname}", 
+                $this->user, 
+                $this->pass
+            );
+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
-            
-            die("Erreur de conexion: " . $e->getMessage());
+            $this->logError($e->getMessage());
+            die("Erreur de co a la bdd: " . $e->getMessage());
         }
     }
 
-    public static function getInstance(): Database {
-        if (self::$instance === null) {
+    public static function getInstance() {
+        if (!self::$instance) {
             self::$instance = new Database();
         }
         return self::$instance;
     }
 
-    public function getConnection(): PDO {
-        return $this->connexion;
+    public function getConnection() {
+        return $this->conn;
+    }
+
+    private function logError($message) {
+        error_log("[ " . date("Y-m-d H:i:s") . " ] " . $message . $this->logFile);
     }
 }
+
 ?>
