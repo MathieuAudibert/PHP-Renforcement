@@ -9,7 +9,7 @@ class Classique extends Musique {
         parent::__construct($titre, $artiste, $album, $duree, 'Classique', $niveau_acces);
     }
 
-    public function streamer($niveau_abonnement) {
+    public function streamer(int $niveau_abonnement): string {
         if ($niveau_abonnement >= $this->niveau_acces) {
             return "Lecture de '{$this->getTitre()}' par {$this->getArtiste()}.";
         } else {

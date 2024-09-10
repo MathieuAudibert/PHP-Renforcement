@@ -7,7 +7,7 @@ require_once 'jazz.php';
 require_once 'classique.php';
 
 class MusiqueFabrique {
-    public static function createMusique($genre, $titre, $artiste, $album, $duree, $niveau_acces) {
+    public static function createMusique(string $genre, string $titre, string $artiste, string $album, int $duree, int $niveau_acces): Musique{
         switch (strtolower($genre)) {
             case 'rap':
                 return new Rap($titre, $artiste, $album, $duree, $niveau_acces);
