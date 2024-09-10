@@ -67,7 +67,9 @@ abstract class Musique {
         $this->niveau_acces = $niveau_acces;
     }
 
-    abstract public function streamer();
+    // Penser a ajouter de la serialisation 
+    
+    abstract public function streamer($niveau_abonnement);
 }
 
 class MusiqueFabrique {
