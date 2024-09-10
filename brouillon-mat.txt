@@ -14,3 +14,5 @@ Factory les types
 
 journalisation de connexion faire table 
 authentification -> statégie (?)
+
+etape de validation du formulaire
