@@ -83,7 +83,7 @@ class MusiqueFabrique {
                 return new Classique($titre, $artiste, $album, $duree, $param1);
                 
             default:
-                throw new InvalidArgumentException("Genre de musique pas existe.");
+                throw new InvalidArgumentException("Genre de musique existe pas.");
         }
     }
 }
