@@ -64,24 +64,18 @@ class MusiqueFabrique {
     public static function createMusique($genre, $titre, $artiste, $album, $duree, $param1) {
         switch (strtolower($genre)) {
             case 'rap':
-                return new RapConcrete($titre, $artiste, $album, $duree, $param1);
+                return new Rap($titre, $artiste, $album, $duree, $param1);
                 
             case 'jazz':
-                return new JazzConcrete($titre, $artiste, $album, $duree, $param1);
+                return new Jazz($titre, $artiste, $album, $duree, $param1);
                 
             case 'classique':
-                return new ClassiqueConcrete($titre, $artiste, $album, $duree, $param1);
+                return new Classique($titre, $artiste, $album, $duree, $param1);
                 
             default:
                 throw new InvalidArgumentException("Genre de musique pas existe.");
         }
     }
 }
-
-?>
-
-
-
-
 
 ?>

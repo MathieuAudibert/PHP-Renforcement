@@ -12,9 +12,5 @@ singleton connexion bdd
 SERIALIZER LES OBJETS!!!!
 Factory les types  
 
-authentification
-
-Class musique : 
-Constructeurs/Destructeurs 
-Setters/Getters
-Methodes/Attributs
+journalisation de connexion faire table 
+authentification -> statégie (?)
