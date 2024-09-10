@@ -1,15 +1,8 @@
--> Classe utilisateurs
--> Classe bdd
+
 utiliser priorités
 
-vlucas/phpdotenv
+SERIALIZER LES OBJETS!!!!  
 
-singleton connexion bdd
-
-SERIALIZER LES OBJETS!!!!
-Factory les types  
-
-journalisation de connexion faire table 
 authentification -> statégie (?)
 url encode
 
