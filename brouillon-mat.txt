@@ -1,12 +1,20 @@
 Creer une classe musique 
 -> interfaces par types de musique 
 -> classe abstraite par artiste?? 
--> Classe 
+-> Classe utilisateurs
+-> Classe bdd
 utiliser priorités
 
-setters
+vlucas/phpdotenv
 
+singleton connexion bdd
 
+SERIALIZER LES OBJETS!!!!
+Factory les types  
+
+authentification
 
 Class musique : 
-Constructeurs/destructeurs 
+Constructeurs/Destructeurs 
+Setters/Getters
+Methodes/Attributs
