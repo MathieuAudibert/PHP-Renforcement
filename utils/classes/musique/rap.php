@@ -9,7 +9,7 @@ class Rap extends Musique {
         parent::__construct($titre, $artiste, $album, $duree, 'Rap', $niveau_acces);
     }
 
-    public function streamer($niveau_abonnement) {
+    public function streamer($niveau_abonnement): float {
         if ($niveau_abonnement >= $this->niveau_acces) {
             return "Lecture de '{$this->getTitre()}' par {$this->getArtiste()}.";
         } else {
