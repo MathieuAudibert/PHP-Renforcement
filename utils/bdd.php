@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 require_once('./cred.env');
 
 $host = $_ENV['DB_HOST'];

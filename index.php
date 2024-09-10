@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 require_once('./src/homepage/controller.php');
 require_once('./src/login/controller.php');
 require_once('./src/register/controller.php');

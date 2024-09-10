@@ -1,0 +1,12 @@
+Creer une classe musique 
+-> interfaces par types de musique 
+-> classe abstraite par artiste?? 
+-> Classe 
+utiliser priorités
+
+setters
+
+
+
+Class musique : 
+Constructeurs/destructeurs 
