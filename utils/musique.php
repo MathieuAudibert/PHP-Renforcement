@@ -8,13 +8,15 @@ abstract class Musique {
     protected $album;
     protected $duree; 
     protected $genre;
+    protected $niveau_acces;
 
-    public function __construct($titre, $artiste, $album, $duree, $genre) {
+    public function __construct($titre, $artiste, $album, $duree, $genre, $niveau_acces) {
         $this->titre = $titre;
         $this->artiste = $artiste;
         $this->album = $album;
         $this->duree = $duree;
         $this->genre = $genre;
+        $this->niveau_acces = $niveau_acces;
     }
 
     public function getTitre() {
@@ -37,6 +39,10 @@ abstract class Musique {
         return $this->genre;
     }
 
+    public function getNiveauAcces(){
+        return $this->niveau_acces;
+    }
+
     public function setTitre($titre) {
         $this->titre = $titre;
     }
@@ -55,6 +61,10 @@ abstract class Musique {
 
     public function setGenre($genre) {
         $this->genre = $genre;
+    }
+
+    public function setNiveauAcces($niveau_acces){
+        $this->niveau_acces = $niveau_acces;
     }
 
     abstract public function streamer();
