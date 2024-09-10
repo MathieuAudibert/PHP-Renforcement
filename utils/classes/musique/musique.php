@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-require_once('./utils/classes/musique/interfaces/interface.php');
+require_once __DIR__ . '\interfaces\interface.php';
 
 abstract class Musique implements MusiqueInterface {
     protected $titre;

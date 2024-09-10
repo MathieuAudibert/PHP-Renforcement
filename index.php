@@ -1,13 +1,12 @@
 <?php
 declare(strict_types=1);
 
-require_once('./src/homepage/controller.php');
-require_once('./src/login/controller.php');
-require_once('./src/register/controller.php');
-require_once('./utils/bdd.php');
+require_once __DIR__ . '/src/homepage/controller.php';
+require_once __DIR__ . '/src/login/controller.php';
+require_once __DIR__ . '/src/register/controller.php';
+require_once __DIR__ . '/utils/bdd.php';
 
-function route_request()
-{
+function route_request() {
     $uri = $_SERVER['REQUEST_URI'];
 
     try {

@@ -1,6 +1,6 @@
 <?php
-require_once('./src/homepage/model.php');
-require_once('./src/homepage/view.php');
+require_once __DIR__ . '\model.php';
+require_once __DIR__ . '\view.php';
 
 function controller_homepage()
 {
@@ -12,16 +12,18 @@ function controller_homepage()
     }
 }
 
-class MusiqueController {
-
-    private $model;
+class HomePageController {
+    private MusiqueModel $musiqueModel;
 
     public function __construct() {
-        $this->model = new MusiqueModel();
+        $this->musiqueModel = new MusiqueModel();
     }
 
-    public function afficherMusiques() {
-        $musiques = $this->model->getAllMusique();
-        require __DIR__ . '/view.php'; 
+    public function displayHomePage(): void {
+        $musiques = $this->musiqueModel->getAllMusiques();
+        HomePageView::render($musiques);
     }
 }
+
+$controller = new HomePageController();
+$controller->displayHomePage();

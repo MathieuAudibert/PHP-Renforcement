@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-require_once 'rap.php';
-require_once 'jazz.php';
-require_once 'classique.php';
+require_once __DIR__ . '\rap.php';
+require_once __DIR__ . '\jazz.php';
+require_once __DIR__ . '\classique.php';
 
 class MusiqueFabrique {
     public static function createMusique(string $genre, string $titre, string $artiste, string $album, int $duree, int $niveau_acces): Musique{

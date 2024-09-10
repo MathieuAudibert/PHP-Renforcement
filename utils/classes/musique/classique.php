@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-require_once 'musique.php';
+require_once __DIR__ . '\musique.php';
 
 class Classique extends Musique {
     public function __construct($titre, $artiste, $album, $duree, $niveau_acces) {

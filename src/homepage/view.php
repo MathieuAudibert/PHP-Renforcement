@@ -35,6 +35,18 @@ function view_homepage()
                 <?php include './src/style.css'; ?>
             </style>
             <p>OUI</p>
+            <?php
+            class HomePageView {
+                public static function render(array $musiques): void {
+                    echo "<h1>Liste des musiques</h1>";
+                    echo "<ul>";
+                    foreach ($musiques as $musique) {
+                        echo "<li>" . htmlspecialchars($musique->getTitre()) . " par " . htmlspecialchars($musique->getArtiste()) . " - Genre : " . htmlspecialchars($musique->getGenre()) . "</li>";
+                    }
+                echo "</ul>";
+                }
+            }
+            ?>
         </main>
 
     </body>
