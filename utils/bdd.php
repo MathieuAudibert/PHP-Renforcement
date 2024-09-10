@@ -2,22 +2,33 @@
 
 declare(strict_types=1);
 
-require_once('./cred.env');
+require_once ('../.env');
 
-$host = $_ENV['DB_HOST'];
-$dbname = $_ENV['DB_NAME'];
-$user = $_ENV['DB_USER'];
-$password = $_ENV['DB_PASS'];
+class Database {
+    private static ?Database $instance = null;
+    private PDO $connexion;
 
-// Ca marchera un jour 
+    private function __construct() {
+        global $host, $user, $dbname, $dbpassword;
+        try {
+            $this->connexion = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $dbpassword);
+            $this->connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
+            
+            die("Erreur de conexion: " . $e->getMessage());
+        }
+    }
 
-try {
-    $bdd = new PDO("pgsql:host={$host};dbname={$dbname}", $user, $password);
-    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    error_log("Pas connnecté: " . $e->getMessage(), 3, 'errors.log');
-    die("Erreur de connection, details dans lse logs.");
+
+    public static function getInstance(): Database {
+        if (self::$instance === null) {
+            self::$instance = new Database();
+        }
+        return self::$instance;
+    }
+
+    public function getConnection(): PDO {
+        return $this->connexion;
+    }
 }
-
-return $bdd;
 ?>
