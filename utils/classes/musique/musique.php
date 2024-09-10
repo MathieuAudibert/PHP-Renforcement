@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-abstract class Musique {
+require_once('./utils/classes/musique/interfaces/interface.php');
+
+abstract class Musique implements MusiqueInterface {
     protected $titre;
     protected $artiste;
     protected $album;
@@ -39,7 +41,7 @@ abstract class Musique {
         return $this->genre;
     }
 
-    public function getNiveauAcces(){
+    public function getNiveauAcces() {
         return $this->niveau_acces;
     }
 
@@ -63,31 +65,11 @@ abstract class Musique {
         $this->genre = $genre;
     }
 
-    public function setNiveauAcces($niveau_acces){
+    public function setNiveauAcces($niveau_acces) {
         $this->niveau_acces = $niveau_acces;
     }
 
-    // Penser a ajouter de la serialisation 
-    
     abstract public function streamer($niveau_abonnement);
-}
-
-class MusiqueFabrique {
-    public static function createMusique($genre, $titre, $artiste, $album, $duree, $param1) {
-        switch (strtolower($genre)) {
-            case 'rap':
-                return new Rap($titre, $artiste, $album, $duree, $param1);
-                
-            case 'jazz':
-                return new Jazz($titre, $artiste, $album, $duree, $param1);
-                
-            case 'classique':
-                return new Classique($titre, $artiste, $album, $duree, $param1);
-                
-            default:
-                throw new InvalidArgumentException("Genre de musique existe pas.");
-        }
-    }
 }
 
 ?>
