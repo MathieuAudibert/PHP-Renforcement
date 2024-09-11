@@ -7,10 +7,10 @@ function view_homepage(array $musiqueList): void
     <html lang="fr-FR" dir="ltr">
 
     <head>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../style.css"> 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Formulaire de connexion</title>
+        <title>Liste des Musiques</title>
     </head>
 
     <body>
@@ -30,22 +30,28 @@ function view_homepage(array $musiqueList): void
             </ul>
             <hr>
         </header>
-        <h1>Liste des Musiques</h1>
-        <ul>
-            <?php if (!empty($musiqueList)): ?>
-                <?php foreach ($musiqueList as $musique): ?>
-                    <li>
-                        <strong>Titre:</strong> <?= htmlspecialchars($musique->getTitre()) ?><br>
-                        <strong>Artiste:</strong> <?= htmlspecialchars($musique->getArtiste()) ?><br>
-                        <strong>Album:</strong> <?= htmlspecialchars($musique->getAlbum()) ?><br>
-                        <strong>Durée:</strong> <?= htmlspecialchars($musique->getDuree()) ?> minutes<br>
-                    </li>
-                <?php endforeach; ?>
-            <?php else: ?>
-                <li>Aucune musique disponible.</li>
-            <?php endif; ?>
-        </ul>
+        
+        <main>
+            <h1>Liste des Musiques</h1>
+            <div class="musique-list">
+                <?php if (!empty($musiqueList)): ?>
+                    <ul>
+                        <?php foreach ($musiqueList as $musique): ?>
+                            <li>
+                                <h3><?php echo htmlspecialchars($musique->getTitre()); ?></h3>
+                                <p>Artiste : <?php echo htmlspecialchars($musique->getArtiste()); ?></p>
+                                <p>Album : <?php echo htmlspecialchars($musique->getAlbum()); ?></p>
+                                <p>Durée : <?php echo htmlspecialchars($musique->getDuree()); ?></p>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php else: ?>
+                    <p>Aucune musique n'a été trouvée.</p>
+                <?php endif; ?>
+            </div>
+        </main>
     </body>
     </html>
     <?php
 }
+?>

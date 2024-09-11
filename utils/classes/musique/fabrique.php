@@ -2,10 +2,11 @@
 
 declare(strict_types=1);
 
-require_once __DIR__ . '\musique.php';
+require_once __DIR__ . '/musique.php';
+require_once __DIR__ . '/musiqueconcr.php';
 
 class MusiqueFabrique {
-    public static function createMusique(string $titre, string $artiste, string $album, int $duree): Musique {
-        return new Musique($titre, $artiste, $album, $duree);
+    public static function createMusique($titre, $artiste, $album, $duree): Musique {
+        return new MusiqueConcrete($titre, $artiste, $album, $duree);
     }
 }

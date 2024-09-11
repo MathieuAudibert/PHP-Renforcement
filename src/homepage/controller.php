@@ -1,6 +1,9 @@
 <?php
-require_once __DIR__ . '\model.php';
-require_once __DIR__ . '\view.php';
+
+declare(strict_types=1);
+
+require_once __DIR__ . '/model.php';
+require_once __DIR__ . '/view.php';
 
 function controller_homepage(): void
 {
@@ -9,6 +12,9 @@ function controller_homepage(): void
         view_homepage($musiqueList);
     }
     catch (Exception $e) {
-        echo "Une erreur s'est produite : " . $e->getMessage();
+        error_log($e->getMessage(), 3, '../../utils/logs/errors.log');
+        echo "Erreur interne";
     }
 }
+
+?>

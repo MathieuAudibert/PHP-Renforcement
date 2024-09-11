@@ -1,6 +1,6 @@
 <?php
-require_once dirname(__DIR__, 2) . '\utils\bdd.php';
-require_once dirname(__DIR__, 2) . '\utils\classes\musique\fabrique.php';
+require_once dirname(__DIR__, 2) . '/utils/bdd.php';
+require_once dirname(__DIR__, 2) . '/utils/classes/musique/fabrique.php';
 
 function model_homepage(): array
 {
@@ -9,15 +9,16 @@ function model_homepage(): array
         $musiqueCollection = $firestore->collection('Musiques');
         $snapshot = $musiqueCollection->documents();
     } catch (Exception $e) {
-        echo "Erreur lors de la récupération des musiques : " . $e->getMessage();
+        error_log($e->getMessage(), 3, '../../utils/logs/errors.log');
+        echo "Erreur de l'import de musiques";
         return [];
     }
 
     if ($snapshot->isEmpty()) {
-        echo "Aucune musique trouvée.";
+        echo "Pas de musiques";
         return [];
     } else {
-        echo "Musiques trouvées : " . count($snapshot) . "<br>";
+        echo "";
     }
 
     $result = [];
@@ -30,13 +31,8 @@ function model_homepage(): array
                 $data['album'],
                 $data['duree']
             );
-            echo "Document ID: " . $document->id() . "<br>";
-            echo "Titre: " . $data['titre'] . "<br>";
-            echo "Artiste: " . $data['artiste'] . "<br>";
-            echo "Album: " . $data['album'] . "<br>";
-            echo "Durée: " . $data['duree'] . "<br><br>";
         } else {
-            echo "Données manquantes pour ce document : " . $document->id() . "<br>";
+            echo "Donnes manquantes : " . $document->id() . "<br>";
         }
     }
 

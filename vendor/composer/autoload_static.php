@@ -4,14 +4,14 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit56183d0a8bf64b3edd65760fd394efb2
+class ComposerStaticInit3fb69766769ec9dbc3f6bbb5ce240810
 {
     public static $files = array (
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
-        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
     );
@@ -27,6 +27,7 @@ class ComposerStaticInit56183d0a8bf64b3edd65760fd394efb2
         array (
             'Rize\\' => 5,
             'Ramsey\\Uuid\\' => 12,
+            'Ramsey\\Collection\\' => 18,
         ),
         'P' => 
         array (
@@ -49,15 +50,28 @@ class ComposerStaticInit56183d0a8bf64b3edd65760fd394efb2
             'Grpc\\Gcp\\' => 9,
             'Grpc\\' => 5,
             'GrahamCampbell\\ResultType\\' => 26,
+            'Google\\Type\\' => 12,
+            'Google\\Rpc\\' => 11,
             'Google\\Protobuf\\' => 16,
-            'Google\\GAX\\UnitTests\\' => 21,
-            'Google\\GAX\\' => 11,
+            'Google\\LongRunning\\' => 19,
+            'Google\\Iam\\' => 11,
             'Google\\Cloud\\Firestore\\' => 23,
             'Google\\Cloud\\Core\\' => 18,
+            'Google\\Cloud\\' => 13,
             'Google\\Auth\\' => 12,
-            'Google\\' => 7,
+            'Google\\Api\\' => 11,
+            'Google\\ApiCore\\LongRunning\\' => 27,
+            'Google\\ApiCore\\' => 15,
+            'GPBMetadata\\Google\\Type\\' => 24,
+            'GPBMetadata\\Google\\Rpc\\' => 23,
             'GPBMetadata\\Google\\Protobuf\\' => 28,
-            'GPBMetadata\\' => 12,
+            'GPBMetadata\\Google\\Longrunning\\' => 31,
+            'GPBMetadata\\Google\\Logging\\' => 27,
+            'GPBMetadata\\Google\\Iam\\' => 23,
+            'GPBMetadata\\Google\\Firestore\\' => 29,
+            'GPBMetadata\\Google\\Cloud\\' => 25,
+            'GPBMetadata\\Google\\Api\\' => 23,
+            'GPBMetadata\\ApiCore\\' => 20,
         ),
         'F' => 
         array (
@@ -66,6 +80,10 @@ class ComposerStaticInit56183d0a8bf64b3edd65760fd394efb2
         'D' => 
         array (
             'Dotenv\\' => 7,
+        ),
+        'B' => 
+        array (
+            'Brick\\Math\\' => 11,
         ),
     );
 
@@ -90,14 +108,18 @@ class ComposerStaticInit56183d0a8bf64b3edd65760fd394efb2
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
         ),
+        'Ramsey\\Collection\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ramsey/collection/src',
+        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/src',
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-factory/src',
-            1 => __DIR__ . '/..' . '/psr/http-message/src',
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+            1 => __DIR__ . '/..' . '/psr/http-factory/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -143,43 +165,93 @@ class ComposerStaticInit56183d0a8bf64b3edd65760fd394efb2
         array (
             0 => __DIR__ . '/..' . '/graham-campbell/result-type/src',
         ),
+        'Google\\Type\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/common-protos/src/Type',
+        ),
+        'Google\\Rpc\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/common-protos/src/Rpc',
+        ),
         'Google\\Protobuf\\' => 
         array (
             0 => __DIR__ . '/..' . '/google/protobuf/src/Google/Protobuf',
         ),
-        'Google\\GAX\\UnitTests\\' => 
+        'Google\\LongRunning\\' => 
         array (
-            0 => __DIR__ . '/..' . '/google/gax/tests',
+            0 => __DIR__ . '/..' . '/google/longrunning/src/LongRunning',
         ),
-        'Google\\GAX\\' => 
+        'Google\\Iam\\' => 
         array (
-            0 => __DIR__ . '/..' . '/google/gax/src',
+            0 => __DIR__ . '/..' . '/google/common-protos/src/Iam',
         ),
         'Google\\Cloud\\Firestore\\' => 
         array (
-            0 => __DIR__ . '/..' . '/google/cloud-firestore',
+            0 => __DIR__ . '/..' . '/google/cloud-firestore/src',
         ),
         'Google\\Cloud\\Core\\' => 
         array (
             0 => __DIR__ . '/..' . '/google/cloud-core/src',
         ),
+        'Google\\Cloud\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/common-protos/src/Cloud',
+        ),
         'Google\\Auth\\' => 
         array (
             0 => __DIR__ . '/..' . '/google/auth/src',
         ),
-        'Google\\' => 
+        'Google\\Api\\' => 
         array (
-            0 => __DIR__ . '/..' . '/google/gax/src/generated/Google',
-            1 => __DIR__ . '/..' . '/google/proto-client/src/Google',
+            0 => __DIR__ . '/..' . '/google/common-protos/src/Api',
+        ),
+        'Google\\ApiCore\\LongRunning\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/longrunning/src/ApiCore/LongRunning',
+        ),
+        'Google\\ApiCore\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/gax/src',
+        ),
+        'GPBMetadata\\Google\\Type\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/common-protos/metadata/Type',
+        ),
+        'GPBMetadata\\Google\\Rpc\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/common-protos/metadata/Rpc',
         ),
         'GPBMetadata\\Google\\Protobuf\\' => 
         array (
             0 => __DIR__ . '/..' . '/google/protobuf/src/GPBMetadata/Google/Protobuf',
         ),
-        'GPBMetadata\\' => 
+        'GPBMetadata\\Google\\Longrunning\\' => 
         array (
-            0 => __DIR__ . '/..' . '/google/gax/src/generated/GPBMetadata',
-            1 => __DIR__ . '/..' . '/google/proto-client/src/GPBMetadata',
+            0 => __DIR__ . '/..' . '/google/longrunning/metadata/Longrunning',
+        ),
+        'GPBMetadata\\Google\\Logging\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/common-protos/metadata/Logging',
+        ),
+        'GPBMetadata\\Google\\Iam\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/common-protos/metadata/Iam',
+        ),
+        'GPBMetadata\\Google\\Firestore\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/cloud-firestore/metadata',
+        ),
+        'GPBMetadata\\Google\\Cloud\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/common-protos/metadata/Cloud',
+        ),
+        'GPBMetadata\\Google\\Api\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/common-protos/metadata/Api',
+        ),
+        'GPBMetadata\\ApiCore\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/gax/metadata/ApiCore',
         ),
         'Firebase\\JWT\\' => 
         array (
@@ -188,6 +260,10 @@ class ComposerStaticInit56183d0a8bf64b3edd65760fd394efb2
         'Dotenv\\' => 
         array (
             0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
+        ),
+        'Brick\\Math\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/brick/math/src',
         ),
     );
 
@@ -209,9 +285,9 @@ class ComposerStaticInit56183d0a8bf64b3edd65760fd394efb2
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit56183d0a8bf64b3edd65760fd394efb2::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit56183d0a8bf64b3edd65760fd394efb2::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit56183d0a8bf64b3edd65760fd394efb2::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit3fb69766769ec9dbc3f6bbb5ce240810::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit3fb69766769ec9dbc3f6bbb5ce240810::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit3fb69766769ec9dbc3f6bbb5ce240810::$classMap;
 
         }, null, ClassLoader::class);
     }
