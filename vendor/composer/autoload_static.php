@@ -23,6 +23,10 @@ class ComposerStaticInit56183d0a8bf64b3edd65760fd394efb2
         array (
             'PhpOption\\' => 10,
         ),
+        'M' => 
+        array (
+            'Mathi\\PhpRenforcement\\' => 22,
+        ),
         'G' => 
         array (
             'GrahamCampbell\\ResultType\\' => 26,
@@ -49,6 +53,10 @@ class ComposerStaticInit56183d0a8bf64b3edd65760fd394efb2
         'PhpOption\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption',
+        ),
+        'Mathi\\PhpRenforcement\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
         'GrahamCampbell\\ResultType\\' => 
         array (
