@@ -6,13 +6,13 @@ class User {
     protected string $username;
     protected string $email;
     protected string $password;
-    protected string $niveauacces;
+    protected int $niveauacces; /
 
     public function __construct(
         string $username,
         string $email,
         string $password,
-        string $niveauacces
+        int $niveauacces 
     ) {
         $this->username = $username;
         $this->email = $email;
@@ -32,7 +32,7 @@ class User {
         return $this->password;
     }
 
-    public function getNiveauAcces(): string {
+    public function getNiveauAcces(): int {
         return $this->niveauacces;
     }
 
@@ -48,7 +48,7 @@ class User {
         $this->password = password_hash($password, PASSWORD_BCRYPT);
     }
 
-    public function setNiveauAcces(string $niveauacces): void {
+    public function setNiveauAcces(int $niveauacces): void {
         $this->niveauacces = $niveauacces;
     }
 
