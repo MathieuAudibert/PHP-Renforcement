@@ -33,7 +33,7 @@ https://pecl.php.net/package/gRPC/1.66.0/windows | https://pecl.php.net/package/
 
 >! IMPORTANT
 Extractez les fichier et glissez les fichier `php_grpc.dll` & `php_protobuf.dll` dans le fichier `C:\tools\php82\ext`
->
+
 
 Ensuite, dans votre fichier php.ini rajoutez n'importe ou ces 2 lignes: 
 ```
