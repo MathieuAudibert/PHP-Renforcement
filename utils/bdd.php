@@ -1,6 +1,6 @@
 <?php
 
-require_once dirname(__DIR__) . '/vendor/autoload.php';
+require_once dirname(__DIR__) . '\vendor\autoload.php';
 
 use Dotenv\Dotenv;
 
@@ -10,8 +10,10 @@ class Bdd
 {
     private static ?FirestoreClient $client = null;
 
-    public static function getClient(): FirestoreClient
+    public static function getFirestoreClient(): FirestoreClient
     {
+        $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+        $dotenv->load();
         if (self::$client === null) {
             $projectId = $_ENV['PROJECT_ID'];
             self::$client = new FirestoreClient([
