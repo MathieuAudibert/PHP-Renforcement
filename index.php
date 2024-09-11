@@ -11,7 +11,7 @@ require_once __DIR__ . '/src/login/controller.php';
 require_once __DIR__ . '/src/register/controller.php';
 require_once __DIR__ . '/utils/bdd.php';
 
-function route_request() {
+function route_request(): void{
     $uri = $_SERVER['REQUEST_URI'];
     
     try {
@@ -28,13 +28,13 @@ function route_request() {
             default:
                 http_response_code(404);
                 echo "Page non trouvée";
-                error_log("Route invalide: $uri", 3, '/utils/logs/errors.log');
+                error_log(message: "Route invalide: $uri", message_type: 3, destination: '/utils/logs/errors.log');
                 break;
         }
     } catch (Exception $e) {
         http_response_code(500);
         echo "Erreur serveur interne";
-        error_log("Erreur $uri: " . $e->getMessage(), 3, '/utils/logs/errors.log');
+        error_log(message: "Erreur $uri: " . $e->getMessage(), message_type: 3, destination: '/utils/logs/errors.log');
     }
 }
     

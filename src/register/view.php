@@ -1,6 +1,6 @@
 <?php
-function view_register()
-{
+declare(strict_types=1);
+function view_register(): void{
 ?>
     <!DOCTYPE html>
     <html lang="fr-FR" dir="ltr">
@@ -55,5 +55,5 @@ function view_register()
 
     </html>
 <?php
-}
+};
 ?>

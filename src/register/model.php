@@ -1,11 +1,10 @@
 <?php
-
 declare(strict_types=1);
 
 abstract class Formulaire {
     abstract public function creerChamp(): Champ;
 
-    public function afficherFormulaire() {
+    public function afficherFormulaire(): string{
         $champ = $this->creerChamp();
         return "Formulaire avec : " . $champ->afficher();
     }

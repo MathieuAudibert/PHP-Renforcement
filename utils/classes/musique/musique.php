@@ -1,5 +1,4 @@
 <?php 
-
 declare(strict_types=1);
 
 
@@ -32,19 +31,19 @@ abstract class Musique {
         return $this->duree;
     }
 
-    public function setTitre($titre) {
+    public function setTitre($titre): void{
         $this->titre = $titre;
     }
 
-    public function setArtiste($artiste) {
+    public function setArtiste($artiste): void{
         $this->artiste = $artiste;
     }
 
-    public function setAlbum($album) {
+    public function setAlbum($album): void{
         $this->album = $album;
     }
 
-    public function setDuree($duree) {
+    public function setDuree($duree): void{
         $this->duree = $duree;
     }
 }
