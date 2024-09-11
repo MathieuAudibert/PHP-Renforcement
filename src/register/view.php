@@ -1,59 +1,32 @@
-<?php
-function view_register()
-{
-?>
-    <!DOCTYPE html>
-    <html lang="fr-FR" dir="ltr">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription utilisateur</title>
+</head>
+<body>
+    <h1>Inscription utilisateur</h1>
+    <form method="post" action="index.php">
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom" name="nom" required><br><br>
 
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Formulaire de connexion</title>
-    </head>
+        <label for="prenom">Prenom:</label>
+        <input type="text" id="prenom" name="prenom" required><br><br>
 
-    <body>
-        <header>
-            <ul class="UlHeader">
-                <span class="LeftNavNoConnect">
-                    <li><a href="/"><img id="Logo" src="https://static.vecteezy.com/system/resources/previews/013/442/219/original/blank-cd-or-dvd-disc-png.png"></a></li>
-                    <li><a href="#">Bibliothèque</a></li>
-                    <li><a href="#">Playlist</a></li>
-                    <li><a href="#">Artistes</a></li>
-                    <li><a href="#">À propos</a></li>
-                </span>
-                <span class="RightNavNoConnect">
-                    <li><a href="/login" id="connexion">Connexion</a></li>
-                </span>
-            </ul>
-            <hr>
-        </header>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
 
-        <main>
-            <style>
-                <?php include './src/style.css'; ?>
-            </style>
-            <div class="middle_container">
-                <h1>Inscription</h1>
-                <br>
-                <form action="" method="POST">
-                    <label for="pseudo">Pseudo :</label>
-                    <input type="text" name="pseudo" id="pseudo" required>
+        <label for="mdp">Mot de passe:</label>
+        <input type="password" id="mdp" name="mdp" required><br><br>
 
-                    <label for="email">Email :</label>
-                    <input type="text" name="email" id="email" required>
+        <label for="niveauacces">Niveau d'accès:</label>
+        <select id="niveauacces" name="niveauacces" required>
+            <option value="<?php echo User::NIVEAU_ACCES_BASIC; ?>">Basique</option>
+            <option value="<?php echo User::NIVEAU_ACCES_PREMIUM; ?>">Premium</option>
+            <option value="<?php echo User::NIVEAU_ACCES_VIP; ?>">VIP</option>
+        </select><br><br>
 
-                    <label for="password">Mot de passe :</label>
-                    <input type="password" name="password" id="password" required>
-
-                    <button type="submit" name="submit" value="Se connecter">Se connecter</button>
-                </form>
-            </div>
-        </main>
-
-    </body>
-
-    </html>
-<?php
-}
-?>
+        <input type="submit" value="Créer utilisateur">
+    </form>
+</body>
+</html>
