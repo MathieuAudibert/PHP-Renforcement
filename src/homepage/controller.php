@@ -15,5 +15,3 @@ function controller_homepage(): void{
         echo "Erreur interne";
     }
 }
-
-?>
