@@ -2,17 +2,8 @@
 require_once __DIR__ . '\model.php';
 require_once __DIR__ . '\view.php';
 
-class MusiqueController
+function controller_homepage(string $genre): void
 {
-    private MusiqueModel $musiqueModel;
-
-    public function __construct()
-    {
-        $this->musiqueModel = new MusiqueModel();
-    }
-
-    public function afficherMusiqueParGenre(string $genre): void
-    {
-        $musiqueList = $this->musiqueModel->getMusiqueByGenre($genre);
-    }
+    $musiqueList = getMusiqueByGenre($genre);
+    view_homepage($musiqueList, $genre);
 }
