@@ -31,8 +31,8 @@ git clone https://github.com/MathieuAudibert/PHP-Renforcement
 Vous aurez besoin de ces 2 extensions PHP afin de pouvoir assurer la connexion entre Firestore et l'app : 
 https://pecl.php.net/package/gRPC/1.66.0/windows | https://pecl.php.net/package/gRPC/1.66.0/windows
 
->! IMPORTANT
-Extractez les fichier et glissez les fichier `php_grpc.dll` & `php_protobuf.dll` dans le fichier `C:\tools\php82\ext`
+>![IMPORTANT]
+>Extractez les fichier et glissez les fichier `php_grpc.dll` & `php_protobuf.dll` dans le fichier `C:\tools\php82\ext`
 
 
 Ensuite, dans votre fichier php.ini rajoutez n'importe ou ces 2 lignes: 
