@@ -1,13 +1,10 @@
 <?php
 
-
 require_once dirname(__DIR__, 1) . '\vendor\autoload.php';
 
-use Dotenv\Dotenv;
 
-// J'ai essayé le singleton si ca passe c insane 
-
-class Database {
+class Database
+{
     private static $instance = null;
     private $conn;
 
@@ -18,23 +15,19 @@ class Database {
     private $pass;
     private $logFile;
 
-    private function __construct() {
-
-        $dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
- // obligé d'utiliser __DIR__ meme si j'ai essayé de veski
-        $dotenv->load();
-
-        $this->host = $_ENV['DB_HOST'];
-        $this->port = $_ENV['DB_PORT'];
-        $this->dbname = $_ENV['DB_NAME'];
-        $this->user = $_ENV['DB_USER'];
-        $this->pass = $_ENV['DB_PASS'];
-        $this->logFile = $_ENV['LOG_FILE'];
+    private function __construct()
+    {
+        $this->host = "localhost";
+        $this->port = "5432";
+        $this->dbname = "postgres";
+        $this->user = "postgres";
+        $this->pass = "unitywebaudiora";
+        $this->logFile = "/utils/logs/serv-error.log";
 
         try {
             $this->conn = new PDO(
-                "pgsql:host={$this->host};port={$this->port};dbname={$this->dbname}", 
-                $this->user, 
+                "pgsql:host={$this->host};port={$this->port};dbname={$this->dbname}",
+                $this->user,
                 $this->pass
             );
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -44,20 +37,21 @@ class Database {
         }
     }
 
-    public static function getInstance() {
+    public static function getInstance()
+    {
         if (!self::$instance) {
             self::$instance = new Database();
         }
         return self::$instance;
     }
 
-    public function getConnection() {
+    public function getConnection()
+    {
         return $this->conn;
     }
 
-    private function logError($message) {
-        error_log("[ " . date("Y-m-d H:i:s") . " ] " . $message, $this->logFile);
+    private function logError($message): void
+    {
+        error_log("[ " . date("Y-m-d H:i:s") . " ] " . $message, 3, $this->logFile);
     }
 }
-
-?>
