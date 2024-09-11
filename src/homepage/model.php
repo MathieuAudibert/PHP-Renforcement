@@ -8,25 +8,25 @@ function model_homepage(): array{
     try {
         $firestore = Bdd::getFirestoreClient();
         $musiqueCollection = $firestore->collection('Musiques');
-        $snapshot = $musiqueCollection->documents();
+        $images = $musiqueCollection->documents();
     } catch (Exception $e) {
         error_log(message: $e->getMessage(), message_type: 3, destination: '../../utils/logs/errors.log');
         echo "Erreur de l'import de musiques";
         return [];
     }
 
-    if ($snapshot->isEmpty()) {
+    if ($images->isEmpty()) {
         echo "Pas de musiques";
         return [];
     } else {
         echo "";
     }
 
-    $result = [];
-    foreach ($snapshot as $document) {
+    $resultats = [];
+    foreach ($images as $document) {
         $data = $document->data();
         if (isset($data['titre'], $data['artiste'], $data['album'], $data['duree'])) {
-            $result[] = MusiqueFabrique::createMusique(
+            $resultats[] = MusiqueFabrique::createMusique(
                 $data['titre'],
                 $data['artiste'],
                 $data['album'],
@@ -37,5 +37,5 @@ function model_homepage(): array{
         }
     }
 
-    return $result;
+    return $resultats;
 }
