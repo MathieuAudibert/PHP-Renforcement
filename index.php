@@ -33,19 +33,6 @@ function route_request() {
     }
 }
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
-$logFile = $_ENV['LOG_FILE'];
-
-function handleShutdown() {
-    $error = error_get_last();
-    if ($error && ($error['type'] === E_ERROR || $error['type'] === E_USER_ERROR)) {
-        error_log("[ " . date("Y-m-d H:i:s") . " ] FErreur Fatale: " . $error['message'], $_ENV['LOG_FILE']);
-    }
-}
-
-register_shutdown_function('handleShutdown');
-
 
 route_request();
 ?>

@@ -1,16 +1,31 @@
 version: '3.8'
 
 services:
-  db:
-    image: postgres:latest
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_db
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: unitywebaudiora
-      POSTGRES_DB: postgres
+      MYSQL_ROOT_PASSWORD: root      
+      MYSQL_DATABASE: audiora        
+      MYSQL_USER: mathi                     
+      MYSQL_PASSWORD: unityweb          
     ports:
-      - "5432:5432"
+      - "3307:3306"                       
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - mysql_data:/var/lib/mysql    
+      - ./sql-scripts:/docker-entrypoint-initdb.d      
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
+      PMA_HOST: mysql                  
+      MYSQL_ROOT_PASSWORD: root    
+    ports:
+      - "80:80"  
+      - "8080:8080"                       
+    depends_on:
+      - mysql                            
 
 volumes:
-  pgdata:
+  mysql_data:
