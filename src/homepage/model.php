@@ -4,7 +4,7 @@ require_once dirname(__DIR__, 2) . '\utils\classes\musique\fabrique.php';
 
 function model_homepage(): array
 {
-    $firestore = getFirestoreClient();
+    $firestore = Bdd::getFirestoreClient();
     $musiqueCollection = $firestore->collection('Musiques');
     $snapshot = $musiqueCollection->documents(); 
 

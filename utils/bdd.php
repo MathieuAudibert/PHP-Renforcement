@@ -12,8 +12,9 @@ class Bdd
 
     public static function getFirestoreClient(): FirestoreClient
     {
-        $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+        $dotenv = Dotenv::createImmutable(__DIR__ . '/../');
         $dotenv->load();
+        
         if (self::$client === null) {
             $projectId = $_ENV['PROJECT_ID'];
             self::$client = new FirestoreClient([
