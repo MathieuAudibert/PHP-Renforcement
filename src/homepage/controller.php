@@ -1,9 +1,9 @@
 <?php
-require_once __DIR__ . '\model.php';
-require_once __DIR__ . '\view.php';
+require_once __DIR__ . '/model.php';
+require_once __DIR__ . '/view.php';
 
-function controller_homepage(string $genre): void
+function controller_homepage(): void
 {
-    $musiqueList = getMusiqueByGenre($genre);
-    view_homepage($musiqueList, $genre);
+    $musiqueList = getMusiques(); 
+    view_homepage($musiqueList);
 }

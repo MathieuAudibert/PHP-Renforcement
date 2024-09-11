@@ -2,23 +2,18 @@
 
 declare(strict_types=1);
 
-require_once __DIR__ . '\interfaces\interface.php';
 
-abstract class Musique implements MusiqueInterface {
+abstract class Musique {
     protected $titre;
     protected $artiste;
     protected $album;
     protected $duree; 
-    protected $genre;
-    protected $niveau_acces;
 
-    public function __construct($titre, $artiste, $album, $duree, $genre, $niveau_acces) {
+    public function __construct($titre, $artiste, $album, $duree) {
         $this->titre = $titre;
         $this->artiste = $artiste;
         $this->album = $album;
         $this->duree = $duree;
-        $this->genre = $genre;
-        $this->niveau_acces = $niveau_acces;
     }
 
     public function getTitre() {
@@ -37,14 +32,6 @@ abstract class Musique implements MusiqueInterface {
         return $this->duree;
     }
 
-    public function getGenre() {
-        return $this->genre;
-    }
-
-    public function getNiveauAcces() {
-        return $this->niveau_acces;
-    }
-
     public function setTitre($titre) {
         $this->titre = $titre;
     }
@@ -60,16 +47,6 @@ abstract class Musique implements MusiqueInterface {
     public function setDuree($duree) {
         $this->duree = $duree;
     }
-
-    public function setGenre($genre) {
-        $this->genre = $genre;
-    }
-
-    public function setNiveauAcces($niveau_acces) {
-        $this->niveau_acces = $niveau_acces;
-    }
-
-    abstract public function streamer($niveau_abonnement);
 }
 
 ?>

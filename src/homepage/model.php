@@ -1,24 +1,21 @@
 <?php
-require_once dirname(__DIR__, 2) . '\utils\bdd.php';
-require_once dirname(__DIR__, 2) . '\utils\classes\musique\fabrique.php';
+require_once __DIR__ . '/bdd.php';
+require_once dirname(__DIR__, 2) . 'utils/classes/musique/fabrique.php';
 
-function getMusiqueByGenre(string $genre): array
+function getMusiques(): array
 {
     $firestore = getFirestoreClient();
-    $musiqueCollection = $firestore->collection('musique');
-    $query = $musiqueCollection->where('genre', '=', $genre);
-    $snapshot = $query->documents();
+    $musiqueCollection = $firestore->collection('Musiques');
+    $snapshot = $musiqueCollection->documents(); 
 
     $result = [];
     foreach ($snapshot as $document) {
         $data = $document->data();
         $result[] = MusiqueFabrique::createMusique(
-            $data['genre'],
             $data['titre'],
             $data['artiste'],
             $data['album'],
-            $data['duree'],
-            $data['niveau_acces']
+            $data['duree']
         );
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-function view_homepage(array $musiqueList, string $genre): void
+function view_homepage(array $musiqueList): void
 {
     ?>
     <!DOCTYPE html>
@@ -10,7 +10,7 @@ function view_homepage(array $musiqueList, string $genre): void
         <title>Liste des Musiques</title>
     </head>
     <body>
-        <h1>Musique du genre: <?= htmlspecialchars($genre) ?></h1>
+        <h1>Liste des Musiques</h1>
         <ul>
             <?php if (!empty($musiqueList)): ?>
                 <?php foreach ($musiqueList as $musique): ?>
@@ -19,12 +19,10 @@ function view_homepage(array $musiqueList, string $genre): void
                         <strong>Artiste:</strong> <?= htmlspecialchars($musique->getArtiste()) ?><br>
                         <strong>Album:</strong> <?= htmlspecialchars($musique->getAlbum()) ?><br>
                         <strong>Durée:</strong> <?= htmlspecialchars($musique->getDuree()) ?> minutes<br>
-                        <strong>Genre:</strong> <?= htmlspecialchars($musique->getGenre()) ?><br>
-                        <strong>Niveau d'accès:</strong> <?= htmlspecialchars($musique->getNiveauAcces()) ?>
                     </li>
                 <?php endforeach; ?>
             <?php else: ?>
-                <li>Aucune musique disponible pour ce genre.</li>
+                <li>Aucune musique disponible.</li>
             <?php endif; ?>
         </ul>
     </body>

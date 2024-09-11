@@ -25,7 +25,7 @@ function route_request() {
                 break;
             default:
                 http_response_code(404);
-                echo "Page non trouvé";
+                echo "Page non trouvée";
                 error_log("Route invalide: $uri", 3, 'errors.log');
                 break;
         }
@@ -36,6 +36,4 @@ function route_request() {
     }
 }
 
-
 route_request();
-?>
