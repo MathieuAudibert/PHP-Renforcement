@@ -6,6 +6,9 @@ require_once __DIR__ . '/src/login/controller.php';
 require_once __DIR__ . '/src/register/controller.php';
 require_once __DIR__ . '/utils/bdd.php';
 
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 function route_request() {
     $uri = $_SERVER['REQUEST_URI'];
 

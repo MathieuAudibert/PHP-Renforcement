@@ -1,38 +1,35 @@
 <?php
 require_once dirname(__DIR__, 2) . '\utils\bdd.php';
+require_once dirname(__DIR__, 2) . '\utils\classes\musique\fabrique.php';
 
-class MusiqueModel {
-    private PDO $pdo;
+class MusiqueModel
+{
+    private FirestoreClient $firestore;
 
-    public function __construct() {
-        $this->pdo = Database::getInstance()->getConnection();
+    public function __construct()
+    {
+        $this->firestore = Bdd::getClient();
     }
 
-    public function getAllMusiques(): array {
-        $query = 'SELECT * FROM musique'; 
-        
-        try {
-            $stmt = $this->pdo->prepare($query);
-            $stmt->execute();
-            
-            $musiques = [];
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                $musiques[] = MusiqueFabrique::createMusique(
-                    $row['genre'],
-                    $row['titre'],
-                    $row['artiste'],
-                    $row['album'],
-                    (int)$row['duree'],
-                    (int)$row['niveau_acces']
-                );
-            }
+    public function getMusiqueByGenre(string $genre): array
+    {
+        $musiqueCollection = $this->firestore->collection('musique');
+        $query = $musiqueCollection->where('genre', '=', $genre);
+        $snapshot = $query->documents();
 
-            return $musiques;
-        } catch (PDOException $e) {
-            error_log($e->getMessage(), 3, __DIR__ . '/../logs/error.log');
-            return [];
+        $result = [];
+        foreach ($snapshot as $document) {
+            $data = $document->data();
+            $result[] = MusiqueFabrique::createMusique(
+                $data['genre'],
+                $data['titre'],
+                $data['artiste'],
+                $data['album'],
+                $data['duree'],
+                $data['niveau_acces']
+            );
         }
+
+        return $result;
     }
 }
-
-?>

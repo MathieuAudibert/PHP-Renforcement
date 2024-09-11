@@ -31,22 +31,23 @@ function view_homepage()
         </header>
 
         <main>
-            <style>
-                <?php include './src/style.css'; ?>
-            </style>
-            <p>OUI</p>
-            <?php
-            class HomePageView {
-                public static function render(array $musiques): void {
-                    echo "<h1>Liste des musiques</h1>";
-                    echo "<ul>";
-                    foreach ($musiques as $musique) {
-                        echo "<li>" . htmlspecialchars($musique->getTitre()) . " par " . htmlspecialchars($musique->getArtiste()) . " - Genre : " . htmlspecialchars($musique->getGenre()) . "</li>";
-                    }
-                echo "</ul>";
-                }
-            }
-            ?>
+        <h1>Musique du genre: <?= htmlspecialchars($genre) ?></h1>
+    <ul>
+        <?php if (!empty($musiqueList)): ?>
+            <?php foreach ($musiqueList as $musique): ?>
+                <li>
+                    <strong>Titre:</strong> <?= htmlspecialchars($musique->getTitre()) ?><br>
+                    <strong>Artiste:</strong> <?= htmlspecialchars($musique->getArtiste()) ?><br>
+                    <strong>Album:</strong> <?= htmlspecialchars($musique->getAlbum()) ?><br>
+                    <strong>Durée:</strong> <?= htmlspecialchars($musique->getDuree()) ?> minutes<br>
+                    <strong>Genre:</strong> <?= htmlspecialchars($musique->getGenre()) ?><br>
+                    <strong>Niveau d'accès:</strong> <?= htmlspecialchars($musique->getNiveauAcces()) ?>
+                </li>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <li>Aucune musique disponible pour ce genre.</li>
+        <?php endif; ?>
+    </ul>
         </main>
 
     </body>
