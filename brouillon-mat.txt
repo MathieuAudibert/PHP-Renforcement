@@ -5,3 +5,16 @@ authentification -> statégie (?)
 url encode
 
 etape de validation du formulaire
+
+TO DO LIST : 
+STRATEGY Class user 
+connexion bdd propre
+transformer en objet la data bdd
+afficher les objets proprement 
+rework table logs
+formulaire php insc/co
+inscription/connexion bdd avec logs 
+-> Projet propre 
+
+Musique : 
+fichier mp3 host en ligne ou lien ytb/spotify

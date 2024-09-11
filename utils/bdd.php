@@ -20,8 +20,7 @@ class Database {
 
     private function __construct() {
 
-        $dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
- // obligé d'utiliser __DIR__ meme si j'ai essayé de veski
+        $dotenv = Dotenv::createImmutable(__DIR__ . '/..');
         $dotenv->load();
 
         $this->host = $_ENV['DB_HOST'];
@@ -29,7 +28,7 @@ class Database {
         $this->dbname = $_ENV['DB_NAME'];
         $this->user = $_ENV['DB_USER'];
         $this->pass = $_ENV['DB_PASS'];
-        $this->logFile = $_ENV['LOG_FILE'];
+        $this->logFile = __DIR__ . '\logs\serv-error.log';
 
         try {
             $this->conn = new PDO(
@@ -55,8 +54,8 @@ class Database {
         return $this->conn;
     }
 
-    private function logError($message) {
-        error_log("[ " . date("Y-m-d H:i:s") . " ] " . $message, $this->logFile);
+    private function logError($message): void {
+        error_log("[ " . date("Y-m-d H:i:s") . " ] " . $message, 3, $this->logFile);
     }
 }
 
