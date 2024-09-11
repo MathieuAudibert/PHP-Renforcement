@@ -1,8 +1,8 @@
 <?php
-require_once __DIR__ . '/bdd.php';
-require_once dirname(__DIR__, 2) . 'utils/classes/musique/fabrique.php';
+require_once dirname(__DIR__, 2) . '\utils\bdd.php';
+require_once dirname(__DIR__, 2) . '\utils\classes\musique\fabrique.php';
 
-function getMusiques(): array
+function model_homepage(): array
 {
     $firestore = getFirestoreClient();
     $musiqueCollection = $firestore->collection('Musiques');
