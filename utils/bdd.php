@@ -1,6 +1,6 @@
 <?php
 
-require_once dirname(__DIR__) . '\vendor\autoload.php';
+require_once dirname(__DIR__, 1) . '\vendor\autoload.php';
 
 use Dotenv\Dotenv;
 
@@ -17,6 +17,7 @@ class Bdd
         
         if (self::$client === null) {
             $projectId = $_ENV['PROJECT_ID'];
+            echo "Project ID: $projectId";
             self::$client = new FirestoreClient([
                 'projectId' => $projectId
             ]);

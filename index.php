@@ -23,13 +23,13 @@ function route_request() {
             default:
                 http_response_code(404);
                 echo "Page non trouvée";
-                error_log("Route invalide: $uri", 3, '/utils/logs/errors.log');
+                error_log("Route invalide: $uri", 3, '\utils\logs\errors.log');
                 break;
         }
     } catch (Exception $e) {
         http_response_code(500);
         echo "Erreur serveur interne";
-        error_log("Erreur $uri: " . $e->getMessage(), 3, '/utils/logs/errors.log');
+        error_log("Erreur $uri: " . $e->getMessage(), 3, '\utils\logs\errors.log');
     }
 }
 
