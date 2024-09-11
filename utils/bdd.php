@@ -1,13 +1,10 @@
 <?php
 
-
 require_once dirname(__DIR__, 1) . '\vendor\autoload.php';
 
-use Dotenv\Dotenv;
 
-// J'ai essayé le singleton si ca passe c insane 
-
-class Database {
+class Database
+{
     private static $instance = null;
     private $conn;
 
@@ -32,8 +29,8 @@ class Database {
 
         try {
             $this->conn = new PDO(
-                "pgsql:host={$this->host};port={$this->port};dbname={$this->dbname}", 
-                $this->user, 
+                "pgsql:host={$this->host};port={$this->port};dbname={$this->dbname}",
+                $this->user,
                 $this->pass
             );
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -43,14 +40,16 @@ class Database {
         }
     }
 
-    public static function getInstance() {
+    public static function getInstance()
+    {
         if (!self::$instance) {
             self::$instance = new Database();
         }
         return self::$instance;
     }
 
-    public function getConnection() {
+    public function getConnection()
+    {
         return $this->conn;
     }
 
@@ -58,5 +57,3 @@ class Database {
         error_log("[ " . date("Y-m-d H:i:s") . " ] " . $message, 3, $this->logFile);
     }
 }
-
-?>
