@@ -7,6 +7,10 @@ require_once __DIR__ . '/view.php';
 
 function controller_library(): void
 {
-    $user = model_library();
-    view_library($user);
+    try {
+        $model_result = model_library();
+        view_library();
+    } catch (Exception $e) {
+        echo "Une erreur s'est produite : " . $e->getMessage();
+    }
 }

@@ -7,6 +7,10 @@ require_once __DIR__ . '/view.php';
 
 function controller_about(): void
 {
-    $user = model_about();
-    view_about($user);
+    try {
+        $model_result = model_about();
+        view_about();
+    } catch (Exception $e) {
+        echo "Une erreur s'est produite : " . $e->getMessage();
+    }
 }

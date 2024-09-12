@@ -7,6 +7,10 @@ require_once __DIR__ . '/view.php';
 
 function controller_likes(): void
 {
-    $user = model_likes();
-    view_likes($user);
+    try {
+        $model_result = model_likes();
+        view_likes();
+    } catch (Exception $e) {
+        echo "Une erreur s'est produite : " . $e->getMessage();
+    }
 }
