@@ -38,9 +38,12 @@ function view_register(): void
             <div class="middle_container">
                 <h1>Inscription</h1>
                 <br>
-                <form action="" method="POST">
-                    <label for="pseudo">Pseudo :</label>
-                    <input type="text" name="pseudo" id="pseudo" required>
+                <form action="/register" method="POST">
+                    <label for="nom">Nom :</label>
+                    <input type="text" name="nom" id="nom" required>
+
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" name="prenom" id="prenom" required>
 
                     <label for="email">Email :</label>
                     <input type="text" name="email" id="email" required>
