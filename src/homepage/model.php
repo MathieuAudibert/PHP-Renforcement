@@ -1,10 +1,12 @@
 <?php
+
 declare(strict_types=1);
 
 require_once dirname(__DIR__, 2) . '/utils/bdd.php';
 require_once dirname(__DIR__, 2) . '/utils/classes/musique/fabrique.php';
 
-function model_homepage(): array{
+function model_homepage(): array
+{
     try {
         $firestore = Bdd::getFirestoreClient();
         $musiqueCollection = $firestore->collection('Musiques');

@@ -27,6 +27,9 @@ function route_request(): void
             case '/register':
                 controller_register();
                 break;
+            case '/page=2':
+                controller_register();
+                break;
             default:
                 http_response_code(404);
                 echo "Page non trouvée";

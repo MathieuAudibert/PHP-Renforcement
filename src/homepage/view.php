@@ -37,23 +37,22 @@ function view_homepage(array $musiqueList): void
                 <?php include './src/style.css'; ?>
             </style>
             <h1>Liste des Musiques</h1>
-            <div class="musique-list">
+            <ul class="musique-list">
                 <?php if (!empty($musiqueList)): ?>
-                    <ul>
-                        <?php foreach ($musiqueList as $musique): ?>
-                            <li>
-                                <h3><?php echo htmlspecialchars($musique->getTitre()); ?></h3>
-                                <p>Artiste : <?php echo htmlspecialchars($musique->getArtiste()); ?></p>
-                                <p>Album : <?php echo htmlspecialchars($musique->getAlbum()); ?></p>
-                                <p>Durée : <?php echo $musique->getDuree(); ?></p>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
+                    <?php foreach ($musiqueList as $musique): ?>
+                        <li class="musique-card">
+                            <h3><?php echo htmlspecialchars($musique->getTitre()); ?></h3>
+                            <p>Artiste : <?php echo htmlspecialchars($musique->getArtiste()); ?></p>
+                            <p>Album : <?php echo htmlspecialchars($musique->getAlbum()); ?></p>
+                            <p>Durée : <?php echo $musique->getDuree(); ?></p>
+                        </li>
+                    <?php endforeach; ?>
                 <?php else: ?>
                     <p>Aucune musique n'a été trouvée.</p>
                 <?php endif; ?>
-            </div>
+            </ul>
         </main>
+
     </body>
 
     </html>

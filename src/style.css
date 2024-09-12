@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -14,7 +15,7 @@ body {
   margin: auto;
 }
 
-/* HEADER*/
+/* HEADER */
 header {
   width: 85%;
   margin: auto;
@@ -75,17 +76,9 @@ span #prenomheader {
 .RightNavNoConnect li {
   margin-right: 10px;
 }
-/* HEADER*/
+/* HEADER */
 
-/* MAIN */
-main {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-/* MAIN */
-
-/* FORM*/
+/* FORM */
 .middle_container {
   margin-top: 10%;
   width: 40%;
@@ -159,4 +152,59 @@ main {
   font-weight: 500;
   line-height: 116%;
 }
-/* HEADER*/
+/* FORM */
+
+/* MAIN */
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.musique-list {
+  display: flex;           /* Utiliser Flexbox pour disposer les cartes */
+  flex-wrap: wrap;         /* Permettre le retour à la ligne si nécessaire */
+  justify-content: center; /* Centrer les cartes horizontalement */
+  gap: 20px;               /* Espacement entre les cartes */
+  list-style-type: none;   /* Retirer les puces des listes */
+  padding: 0;
+  margin: 0 auto;
+}
+
+.musique-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+
+.musique-list li {
+  background-color: white;
+  padding: 20px;
+  margin: 10px 0;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  color: #000;
+}
+
+main h1 {
+  text-align: center;
+}
+
+.musique-list h3 {
+  text-align: center;
+  margin: 0 0 10px 0;
+  font-size: 20px;
+}
+
+.musique-list p {
+  text-align: center;
+  margin: 5px 0;
+}
+/* MAIN */
