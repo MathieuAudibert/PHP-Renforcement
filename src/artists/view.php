@@ -21,7 +21,7 @@ function view_artists(): void
 
         <main>
             <style>
-                <?php include 'src\homepage\style.css'; ?>
+                <?php include 'src\artists\style.css'; ?>
             </style>
             <h2>Les Artistes</h2>
         </main>

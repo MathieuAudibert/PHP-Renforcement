@@ -21,7 +21,7 @@ function view_library(): void
 
         <main>
             <style>
-                <?php include 'src\homepage\style.css'; ?>
+                <?php include 'src\library\style.css'; ?>
             </style>
             <h2>Bibliothèque</h2>
         </main>

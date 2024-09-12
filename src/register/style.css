@@ -75,6 +75,10 @@ span #prenomheader {
 .RightNavNoConnect li {
   margin-right: 10px;
 }
+
+.user-name {
+  color: whitesmoke;
+}
 /* HEADER*/
 
 /* MAIN */

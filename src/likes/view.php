@@ -21,7 +21,7 @@ function view_likes(): void
 
         <main>
             <style>
-                <?php include 'src\homepage\style.css'; ?>
+                <?php include 'src\likes\style.css'; ?>
             </style>
             <h2>Titres likés</h2>
         </main>

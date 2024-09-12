@@ -35,7 +35,7 @@ function header_connected($nom, $prenom)
                     <li><a href="/about">À propos</a></li>
                 </span>
                 <span class=RightNavNoConnect> 
-                        <li>' . htmlspecialchars($prenom) . '</li>
+                        <li class="user-name">' . htmlspecialchars($prenom) . '</li>
                         <li> <a href=/logout ><img id=Theme src=https://i.ibb.co/S77z1XY/icons8-logout-48.png> </a></li>
                     </span>
             </ul>

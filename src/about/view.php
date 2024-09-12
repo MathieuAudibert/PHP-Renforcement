@@ -21,7 +21,7 @@ function view_about(): void
 
         <main>
             <style>
-                <?php include 'src\homepage\style.css'; ?>
+                <?php include 'src\about\style.css'; ?>
             </style>
             <h2>A propos de nous</h2>
         </main>
