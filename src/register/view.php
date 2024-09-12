@@ -1,6 +1,8 @@
 <?php
+
 declare(strict_types=1);
-function view_register(): void{
+function view_register(): void
+{
 ?>
     <!DOCTYPE html>
     <html lang="fr-FR" dir="ltr">
@@ -47,6 +49,9 @@ function view_register(): void{
                     <input type="password" name="password" id="password" required>
 
                     <button type="submit" name="submit" value="Se connecter">Se connecter</button>
+                    <br>
+                    <a href="/login">Vous avez déjà un compte chez nous ? Connectez-vous !</a>
+
                 </form>
             </div>
         </main>
