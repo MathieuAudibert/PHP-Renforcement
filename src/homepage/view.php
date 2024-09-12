@@ -12,7 +12,7 @@ function view_homepage(array $musiqueList): void
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Liste des Musiques</title>
+        <title>Audiora</title>
     </head>
 
     <body>

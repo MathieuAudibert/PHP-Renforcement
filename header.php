@@ -29,10 +29,10 @@ function header_connected($nom, $prenom)
             <ul class="UlHeader">
                 <span class="LeftNavConnected">
                     <li><a href="/"><img id="Logo" src="https://static.vecteezy.com/system/resources/previews/013/442/219/original/blank-cd-or-dvd-disc-png.png"></a></li>
-                    <li><a href="#">Bibliothèque</a></li>
-                    <li><a href="#">Titres Likés</a></li>
-                    <li><a href="#">Artistes</a></li>
-                    <li><a href="#">À propos</a></li>
+                    <li><a href="/library">Bibliothèque</a></li>
+                    <li><a href="/likes">Titres Likés</a></li>
+                    <li><a href="/artists">Artistes</a></li>
+                    <li><a href="/about">À propos</a></li>
                 </span>
                 <span class=RightNavNoConnect> 
                         <li>' . htmlspecialchars($prenom) . '</li>
@@ -63,10 +63,10 @@ function header_noConnect()
             <ul class="UlHeader">
                 <span class="LeftNavNoConnect">
                     <li><a href="/"><img id="Logo" src="https://static.vecteezy.com/system/resources/previews/013/442/219/original/blank-cd-or-dvd-disc-png.png"></a></li>
-                    <li><a href="#">Bibliothèque</a></li>
-                    <li><a href="#">Titres Likés</a></li>
-                    <li><a href="#">Artistes</a></li>
-                    <li><a href="#">À propos</a></li>
+                    <li><a href="/login">Bibliothèque</a></li>
+                    <li><a href="/login">Titres Likés</a></li>
+                    <li><a href="/login">Artistes</a></li>
+                    <li><a href="/login">À propos</a></li>
                 </span>
                 <span class="RightNavNoConnect">
                     <li><a href="/register" id="inscription">Inscription</a></li>
@@ -75,19 +75,6 @@ function header_noConnect()
             </ul>
             <hr>
         </header>
-         <script>
-                var currentPath = window.location.pathname;
-                var pathsToRedirect = [
-                    "/bibliotheque",
-                    "/likes",
-                    "/artistes",
-                    "/about",
-                ];
-                
-                if (pathsToRedirect.includes(currentPath)) {
-                    window.location.href = "/login";
-                }
-            </script>
     </body>
     </html>
     ';

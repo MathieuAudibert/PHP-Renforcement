@@ -10,6 +10,10 @@ error_reporting(E_ALL);
 require_once __DIR__ . '/src/homepage/controller.php';
 require_once __DIR__ . '/src/login/controller.php';
 require_once __DIR__ . '/src/register/controller.php';
+require_once __DIR__ . '/src/about/controller.php';
+require_once __DIR__ . '/src/artists/controller.php';
+require_once __DIR__ . '/src/library/controller.php';
+require_once __DIR__ . '/src/likes/controller.php';
 require_once __DIR__ . '/utils/bdd.php';
 
 function route_request(): void
@@ -26,6 +30,18 @@ function route_request(): void
                 break;
             case '/register':
                 controller_register();
+                break;
+            case '/about':
+                controller_about();
+                break;
+            case '/library':
+                controller_library();
+                break;
+            case '/likes':
+                controller_likes();
+                break;
+            case '/artists':
+                controller_artists();
                 break;
             case '/logout':
                 require('logout.php');
