@@ -38,7 +38,7 @@ function view_register(): void
             <div class="middle_container">
                 <h1>Inscription</h1>
                 <br>
-                <form action="/register" method="POST">
+                <form onsubmit="alert('Inscription réussi !');" action="" method="POST">
                     <label for="nom">Nom :</label>
                     <input type="text" name="nom" id="nom" required>
 

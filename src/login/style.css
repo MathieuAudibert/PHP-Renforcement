@@ -77,13 +77,21 @@ span #prenomheader {
 }
 /* HEADER*/
 
+/* MAIN */
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+/* MAIN */
+
 /* FORM*/
 .middle_container {
   margin-top: 10%;
   width: 40%;
-  height: 500px;
+  height: 400px;
   text-align: center;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
   border-radius: 20px;
 }
 
@@ -155,18 +163,11 @@ span #prenomheader {
 
 /* MAIN */
 
-main {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
 .musique-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
   list-style-type: none;
   padding: 0;
   margin: 0 auto;
@@ -181,17 +182,8 @@ main {
   text-align: center;
 }
 
-.musique-card p {
-  font-size: 17 px;
-}
-
-.musique-card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
 .musique-list li {
-  background-color: whitesmoke;
+  background-color: white;
   padding: 20px;
   margin: 10px 0;
   width: 300px;
@@ -201,11 +193,7 @@ main {
   color: #000;
 }
 
-h2 {
-  margin-bottom: 25px;
-  margin-top: 15px;
-  font-size: 40px;
-  color: #ffffff;
+main h1 {
   text-align: center;
 }
 

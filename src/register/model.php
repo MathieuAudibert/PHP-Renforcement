@@ -1,10 +1,12 @@
 <?php
+
 declare(strict_types=1);
 
 require_once dirname(__DIR__, 2) . '/utils/bdd.php';
 require_once dirname(__DIR__, 2) . '/utils/classes/users/fabrique.php';
 
-function createUser() {
+function createUser()
+{
     $nom = preg_match("/^[a-zA-Z\s'-]+$/", $_POST['nom']) ? $_POST['nom'] : null;
     $prenom = $_POST['prenom'] ?? null;
     $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
@@ -35,10 +37,13 @@ function createUser() {
     return $user;
 }
 
-function model_register() {
+function model_register()
+{
     try {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            return createUser();
+            $user = createUser();
+            header("Location: /login");
+            exit(); // Ensure no further code is executed after redirection
         }
     } catch (Exception $e) {
         echo "Erreur lors de l'inscription : " . $e->getMessage();

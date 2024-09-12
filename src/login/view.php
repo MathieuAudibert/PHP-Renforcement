@@ -31,7 +31,7 @@ function view_login()
 
         <main>
             <style>
-                <?php include './src/style.css'; ?>
+                <?php include 'src\login\style.css'; ?>
             </style>
             <div class="middle_container">
                 <h1>Connexion</h1>
