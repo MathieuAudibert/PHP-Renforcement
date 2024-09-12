@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 /*ini_set('display_errors', 1);
@@ -11,9 +12,10 @@ require_once __DIR__ . '/src/login/controller.php';
 require_once __DIR__ . '/src/register/controller.php';
 require_once __DIR__ . '/utils/bdd.php';
 
-function route_request(): void{
+function route_request(): void
+{
     $uri = $_SERVER['REQUEST_URI'];
-    
+
     try {
         switch ($uri) {
             case '/':
@@ -37,5 +39,5 @@ function route_request(): void{
         error_log(message: "Erreur $uri: " . $e->getMessage(), message_type: 3, destination: '/utils/logs/errors.log');
     }
 }
-    
+
 route_request();

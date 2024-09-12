@@ -1,5 +1,5 @@
 <?php
-/*
+
 require_once('./src/login/model.php');
 require_once('./src/login/view.php');
 function controller_login()
@@ -11,4 +11,3 @@ function controller_login()
         echo "Une erreur s'est produite : " . $e->getMessage();
     }
 }
-*/

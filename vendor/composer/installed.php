@@ -3,7 +3,7 @@
         'name' => 'mathi/php-renforcement',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'c46000e90ca2b014b423f6187405906c8e65c0b0',
+        'reference' => 'e01bf6a4f191ec4740cb648f417189e581b152d4',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -148,7 +148,7 @@
         'mathi/php-renforcement' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'c46000e90ca2b014b423f6187405906c8e65c0b0',
+            'reference' => 'e01bf6a4f191ec4740cb648f417189e581b152d4',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

@@ -1,5 +1,5 @@
 <?php
-/*require_once('./src/register/model.php');
+require_once('./src/register/model.php');
 require_once('./src/register/view.php');
 function controller_register()
 {
@@ -10,4 +10,3 @@ function controller_register()
         echo "Une erreur s'est produite : " . $e->getMessage();
     }
 }
-*/

@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
   margin: 0;
@@ -14,6 +14,7 @@ body {
   margin: auto;
 }
 
+/* HEADER*/
 header {
   width: 85%;
   margin: auto;
@@ -27,7 +28,7 @@ header {
 ul {
   display: flex;
   align-items: center;
-  list-style: none;
+  list-style: none !important;
   justify-content: space-between;
   margin-top: 0;
 }
@@ -38,36 +39,124 @@ ul {
 }
 
 .LeftNavNoConnect li {
-  margin: 10px;
+  display: flex;
+  margin: 10px 10px 0px 10px;
 }
 
 .RightNavNoConnect {
+  cursor: pointer !important;
   display: flex;
   align-items: center;
   margin-top: 10px;
+}
+
+.RightNavNoConnect img {
+  width: 500px;
+}
+
+#Theme {
+  width: 30px;
+  height: 30px;
 }
 
 a {
   text-decoration: none;
   color: whitesmoke;
   font-family: DM Sans;
+  font-style: normal;
   font-weight: 500;
 }
 
+span #prenomheader {
+  color: whitesmoke;
+  margin-right: 10px;
+}
+
+.RightNavNoConnect li {
+  margin-right: 10px;
+}
+/* HEADER*/
+
+/* MAIN */
 main {
   width: 100%;
   display: flex;
   justify-content: center;
 }
+/* MAIN */
 
-.musique-list ul {
-  list-style-type: none;
+/* FORM*/
+.middle_container {
+  margin-top: 10%;
+  width: 40%;
+  height: 500px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
 }
 
-.musique-list li {
-  margin-bottom: 20px;
+.middle_container h1 {
+  color: #ffffff;
+  font-family: DM Sans;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 3%;
+  text-overflow: clip;
+  overflow: hidden;
 }
 
-.musique-list h3 {
-  margin-bottom: 5px;
+.middle_container input {
+  width: 50%;
+  height: 30px;
+  display: flex;
+  margin: 15px auto;
+  text-align: center;
+  border-radius: 5px;
+  border: 1.5px solid #000;
 }
+
+.middle_container button {
+  width: 30%;
+  height: 50px;
+  border-radius: 17.914px;
+  background: rgb(255, 255, 255);
+  color: rgb(29, 94, 84);
+  font-family: DM Sans;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 122%;
+  margin: 18px auto;
+  border: 0px solid white;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.middle_container label {
+  color: #f7f7f7;
+  font-family: DM Sans;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.middle_container p {
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-family: DM Sans;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 116%;
+}
+
+.middle_container a {
+  color: #0066c3;
+  font-family: DM Sans;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 116%;
+}
+/* HEADER*/
