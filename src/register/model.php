@@ -9,11 +9,9 @@ function createUser(){
     $prenom = $_POST['prenom'];
     $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
     $password = $_POST['password'];
-    $user = UserFabrique::createUser($nom, $prenom, $email, $password, $titreLike);
+    $user = UserFabrique::createUser($nom, $prenom, $email, $password, []);
     return $user;
 }
-
-
 
 function model_register() {
     

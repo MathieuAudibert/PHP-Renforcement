@@ -5,7 +5,7 @@ require_once __DIR__ . '/musique.php';
 require_once __DIR__ . '/musiqueconcr.php';
 
 class MusiqueFabrique {
-    public static function createMusique($titre, $artiste, $album, $duree): Musique {
-        return new MusiqueConcrete($titre, $artiste, $album, $duree);
+    public static function createMusique($titre, $artiste, $album, $duree, $cover): Musique {
+        return new MusiqueConcrete($titre, $artiste, $album, $duree, $cover);
     }
 }

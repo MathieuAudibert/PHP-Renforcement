@@ -27,12 +27,13 @@ function model_homepage(): array
     $resultats = [];
     foreach ($images as $document) {
         $data = $document->data();
-        if (isset($data['titre'], $data['artiste'], $data['album'], $data['duree'])) {
+        if (isset($data['titre'], $data['artiste'], $data['album'], $data['duree'], $data['cover'])) {
             $resultats[] = MusiqueFabrique::createMusique(
                 $data['titre'],
                 $data['artiste'],
                 $data['album'],
-                $data['duree']
+                $data['duree'],
+                $data['cover']
             );
         } else {
             echo "Donnes manquantes : " . $document->id() . "<br>";
