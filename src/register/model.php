@@ -1,57 +1,21 @@
 <?php
-
 declare(strict_types=1);
 
-function model_register()
-{
-    abstract class Formulaire
-    {
-        abstract public function creerChamp(): Champ;
+require_once dirname(__DIR__, 2) . '/utils/bdd.php';
+require_once dirname(__DIR__, 2) . '/utils/classes/users/fabrique.php';
 
-        public function afficherFormulaire(): string
-        {
-            $champ = $this->creerChamp();
-            return "Formulaire avec : " . $champ->afficher();
-        }
-    }
-
-    class FormulaireTexte extends Formulaire
-    {
-        public function creerChamp(): Champ
-        {
-            return new ChampTexte();
-        }
-    }
-
-    class FormulaireMotDePasse extends Formulaire
-    {
-        public function creerChamp(): Champ
-        {
-            return new ChampMotDePasse();
-        }
-    }
-
-    interface Champ
-    {
-        public function afficher(): string;
-    }
-
-    class ChampTexte implements Champ
-    {
-        public function afficher(): string
-        {
-            return "Champ de texte";
-        }
-    }
-
-    class ChampMotDePasse implements Champ
-    {
-        public function afficher(): string
-        {
-            return "Champ de mot de passe";
-        }
-    }
-
-    $formulaire = new FormulaireTexte();
-    echo $formulaire->afficherFormulaire();
+function createUser(){
+    $nom = preg_match("/^[a-zA-Z\s'-]+$/", $_POST['nom']);
+    $prenom = $_POST['prenom'];
+    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+    $password = $_POST['password'];
+    $user = UserFabrique::createUser($nom, $prenom, $email, $password, $titreLike);
+    return $user;
 }
+
+
+
+function model_register() {
+    
+}
+

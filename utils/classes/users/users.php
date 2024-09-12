@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-class User {
+abstract class User {
     protected string $nom;
     protected string $prenom;
     protected string $email;
