@@ -33,7 +33,7 @@ function view_register(): void
 
         <main>
             <style>
-                <?php include './src/style.css'; ?>
+                <?php include 'src\register\style.css'; ?>
             </style>
             <div class="middle_container">
                 <h1>Inscription</h1>

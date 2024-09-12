@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 function view_homepage(array $musiqueList): void
 {
+    include('header.php');
 ?>
     <!DOCTYPE html>
     <html lang="fr-FR" dir="ltr">
@@ -16,20 +17,6 @@ function view_homepage(array $musiqueList): void
 
     <body>
         <header>
-            <ul class="UlHeader">
-                <span class="LeftNavNoConnect">
-                    <li><a href="/"><img id="Logo" src="https://static.vecteezy.com/system/resources/previews/013/442/219/original/blank-cd-or-dvd-disc-png.png"></a></li>
-                    <li><a href="#">Bibliothèque</a></li>
-                    <li><a href="#">Playlist</a></li>
-                    <li><a href="#">Artistes</a></li>
-                    <li><a href="#">À propos</a></li>
-                </span>
-                <span class="RightNavNoConnect">
-                    <li><a href="/register" id="inscription">Inscription</a></li>
-                    <li><a href="/login" id="connexion">Connexion</a></li>
-                </span>
-            </ul>
-            <hr>
         </header>
 
         <main>

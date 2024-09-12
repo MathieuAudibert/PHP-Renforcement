@@ -50,6 +50,15 @@ ul {
   margin-top: 10px;
 }
 
+span.LeftNavConnected {
+  display: flex;
+  align-items: center;
+}
+
+span.LeftNavConnected li {
+  margin-left: 15px;
+}
+
 .RightNavNoConnect img {
   width: 500px;
 }

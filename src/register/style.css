@@ -72,11 +72,9 @@ span #prenomheader {
   margin-right: 10px;
 }
 
-.RightNavNoConnect li p {
+.RightNavNoConnect li {
   margin-right: 10px;
 }
-
-.RightNavNoConnect
 /* HEADER*/
 
 /* MAIN */
@@ -89,7 +87,7 @@ main {
 
 /* FORM*/
 .middle_container {
-  margin-top: 8%;
+  margin-top: 7%;
   width: 40%;
   height: 570px;
   text-align: center;

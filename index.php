@@ -27,8 +27,8 @@ function route_request(): void
             case '/register':
                 controller_register();
                 break;
-            case '/page=2':
-                controller_register();
+            case '/logout':
+                require('logout.php');
                 break;
             default:
                 http_response_code(404);
