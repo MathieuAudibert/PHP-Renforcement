@@ -8,15 +8,13 @@ abstract class Musique
     protected $artiste;
     protected $album;
     protected $cover;
-    protected $duree;
     protected $audioSrc; 
 
-    public function __construct($titre, $artiste, $album, $duree, $cover, $audioSrc)
+    public function __construct($titre, $artiste, $album, $cover, $audioSrc)
     {
         $this->titre = $titre;
         $this->artiste = $artiste;
         $this->album = $album;
-        $this->duree = $duree;
         $this->cover = $cover;
         $this->audioSrc = $audioSrc; 
     }
@@ -34,11 +32,6 @@ abstract class Musique
     public function getAlbum()
     {
         return $this->album;
-    }
-
-    public function getDuree()
-    {
-        return $this->duree;
     }
 
     public function getCover()
@@ -64,11 +57,6 @@ abstract class Musique
     public function setAlbum($album): void
     {
         $this->album = $album;
-    }
-
-    public function setDuree($duree): void
-    {
-        $this->duree = $duree;
     }
 
     public function setCover($cover): void

@@ -31,7 +31,7 @@ function model_homepage(): array
         $data = $document->data();
 
         // Filtrage en fonction du terme de recherche
-        if (isset($data['titre'], $data['artiste'], $data['album'], $data['duree'], $data['cover'], $data['audioSrc'])) {
+        if (isset($data['titre'], $data['artiste'], $data['album'], $data['cover'], $data['audioSrc'])) {
             if (
                 stripos($data['titre'], $searchTerm) !== false ||
                 stripos($data['artiste'], $searchTerm) !== false ||
@@ -41,7 +41,6 @@ function model_homepage(): array
                     $data['titre'],
                     $data['artiste'],
                     $data['album'],
-                    $data['duree'],
                     $data['cover'],
                     $data['audioSrc']
                 );
