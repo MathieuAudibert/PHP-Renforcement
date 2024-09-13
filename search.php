@@ -2,8 +2,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-require_once dirname(__DIR__, 2) . '/utils/bdd.php';
-require_once dirname(__DIR__, 2) . '/utils/classes/musique/fabrique.php';
+require_once __DIR__ . '/utils/bdd.php';
+require_once __DIR__ . '/utils/classes/musique/fabrique.php';
 
 header('Content-Type: application/json');
 

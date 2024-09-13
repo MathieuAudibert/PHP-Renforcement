@@ -30,6 +30,7 @@ function view_homepage(array $musiqueList): void
                                 <h3>Artiste : <?php echo htmlspecialchars($musique->getArtiste()); ?></h3>
                                 <p>Titre : <?php echo htmlspecialchars($musique->getTitre()); ?></p>
                                 <p>Album : <?php echo htmlspecialchars($musique->getAlbum()); ?></p>
+
                                 <img src="<?php echo htmlspecialchars($musique->getCover()); ?>" alt="Cover de la musique">
                                 <br>
                                 <?php if (!empty($musique->getAudioSrc())): ?>
