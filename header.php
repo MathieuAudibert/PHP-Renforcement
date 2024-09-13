@@ -30,7 +30,6 @@ function header_connected($nom, $prenom)
             <ul class="UlHeader">
                 <span class="LeftNavConnected">
                     <li><a href="/"><img id="Logo" src="https://static.vecteezy.com/system/resources/previews/013/442/219/original/blank-cd-or-dvd-disc-png.png"></a></li>
-                    <li><a href="/library">Bibliothèque</a></li>
                     <li><a href="/likes">Titres Likés</a></li>
                     <li><a href="/artists">Artistes</a></li>
                     <li><a href="/about">À propos</a></li>
@@ -64,7 +63,6 @@ function header_noConnect()
     <ul class="UlHeader">
         <span class="LeftNavNoConnect">
             <li><a href="/"><img id="Logo" src="https://static.vecteezy.com/system/resources/previews/013/442/219/original/blank-cd-or-dvd-disc-png.png"></a></li>
-            <li><a href="/login">Bibliothèque</a></li>
             <li><a href="/login">Titres Likés</a></li>
             <li><a href="/login">Artistes</a></li>
             <li><a href="/login">À propos</a></li>

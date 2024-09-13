@@ -267,3 +267,9 @@ h2 {
   text-align: center;
   margin: 5px 0;
 }
+
+.musique-card button {
+  border: none;
+  background: none;
+  width: 45px;
+}

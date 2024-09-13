@@ -12,39 +12,33 @@ function model_homepage(): array
     try {
         $firestore = Bdd::getFirestoreClient();
         $musiqueCollection = $firestore->collection('Musiques');
-        $images = $musiqueCollection->documents();
+        $documents = $musiqueCollection->documents();
     } catch (Exception $e) {
         error_log($e->getMessage(), 3, '../../utils/logs/errors.log');
         echo "Erreur de l'import de musiques";
         return [];
     }
 
-    if ($images->isEmpty()) {
+    if ($documents->isEmpty()) {
         echo "Pas de musiques";
         return [];
-    } else {
-        echo "";
     }
 
     $resultats = [];
-    foreach ($images as $document) {
+    foreach ($documents as $document) {
         $data = $document->data();
         if (isset($data['titre'], $data['artiste'], $data['album'], $data['cover'], $data['audioSrc'])) {
-            if (
-                stripos($data['titre'], $searchTerm) !== false ||
-                stripos($data['artiste'], $searchTerm) !== false ||
-                stripos($data['album'], $searchTerm) !== false
-            ) {
-                $resultats[] = MusiqueFabrique::createMusique(
-                    $data['titre'],
-                    $data['artiste'],
-                    $data['album'],
-                    $data['cover'],
-                    $data['audioSrc']
-                );
-            }
+            // Passer l'ID du document à la fabrique
+            $resultats[] = MusiqueFabrique::createMusique(
+                $document->id(), // ID du document Firestore
+                $data['titre'],
+                $data['artiste'],
+                $data['album'],
+                $data['cover'],
+                $data['audioSrc']
+            );
         } else {
-            echo "Données manquantes : " . $document->id() . "<br>";
+            echo "Données manquantes pour la musique ID : " . $document->id() . "<br>";
         }
     }
 

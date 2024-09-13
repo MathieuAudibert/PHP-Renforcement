@@ -12,7 +12,6 @@ require_once __DIR__ . '/src/login/controller.php';
 require_once __DIR__ . '/src/register/controller.php';
 require_once __DIR__ . '/src/about/controller.php';
 require_once __DIR__ . '/src/artists/controller.php';
-require_once __DIR__ . '/src/library/controller.php';
 require_once __DIR__ . '/src/likes/controller.php';
 require_once __DIR__ . '/utils/bdd.php';
 
@@ -33,9 +32,6 @@ function route_request(): void
                 break;
             case '/about':
                 controller_about();
-                break;
-            case '/library':
-                controller_library();
                 break;
             case '/likes':
                 controller_likes();
