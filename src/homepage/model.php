@@ -29,8 +29,6 @@ function model_homepage(): array
     $resultats = [];
     foreach ($images as $document) {
         $data = $document->data();
-
-        // Filtrage en fonction du terme de recherche
         if (isset($data['titre'], $data['artiste'], $data['album'], $data['cover'], $data['audioSrc'])) {
             if (
                 stripos($data['titre'], $searchTerm) !== false ||

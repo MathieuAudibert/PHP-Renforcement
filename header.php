@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 function select_role()
@@ -71,6 +72,7 @@ function header_noConnect()
             <li class="search-bar">
                 <input type="text" id="search" placeholder="Rechercher...">
             </li>
+
         </span>
         <span class="RightNavNoConnect">
             <li><a href="/register" id="inscription">Inscription</a></li>
