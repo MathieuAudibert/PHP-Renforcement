@@ -7,6 +7,8 @@ require_once dirname(__DIR__, 2) . '/utils/classes/musique/fabrique.php';
 
 function model_homepage(): array
 {
+    $searchTerm = $_GET['search'] ?? '';
+
     try {
         $firestore = Bdd::getFirestoreClient();
         $musiqueCollection = $firestore->collection('Musiques');
@@ -28,15 +30,22 @@ function model_homepage(): array
     foreach ($images as $document) {
         $data = $document->data();
 
+        // Filtrage en fonction du terme de recherche
         if (isset($data['titre'], $data['artiste'], $data['album'], $data['duree'], $data['cover'], $data['audioSrc'])) {
-            $resultats[] = MusiqueFabrique::createMusique(
-                $data['titre'],
-                $data['artiste'],
-                $data['album'],
-                $data['duree'],
-                $data['cover'],
-                $data['audioSrc'] 
-            );
+            if (
+                stripos($data['titre'], $searchTerm) !== false ||
+                stripos($data['artiste'], $searchTerm) !== false ||
+                stripos($data['album'], $searchTerm) !== false
+            ) {
+                $resultats[] = MusiqueFabrique::createMusique(
+                    $data['titre'],
+                    $data['artiste'],
+                    $data['album'],
+                    $data['duree'],
+                    $data['cover'],
+                    $data['audioSrc']
+                );
+            }
         } else {
             echo "Données manquantes : " . $document->id() . "<br>";
         }

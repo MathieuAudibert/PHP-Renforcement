@@ -46,11 +46,6 @@ function route_request(): void
             case '/logout':
                 require('logout.php');
                 break;
-            default:
-                http_response_code(404);
-                echo "Page non trouvée";
-                error_log(message: "Route invalide: $uri", message_type: 3, destination: '/utils/logs/errors.log');
-                break;
         }
     } catch (Exception $e) {
         http_response_code(500);

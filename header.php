@@ -60,21 +60,25 @@ function header_noConnect()
 
     <body>
         <header>
-            <ul class="UlHeader">
-                <span class="LeftNavNoConnect">
-                    <li><a href="/"><img id="Logo" src="https://static.vecteezy.com/system/resources/previews/013/442/219/original/blank-cd-or-dvd-disc-png.png"></a></li>
-                    <li><a href="/login">Bibliothèque</a></li>
-                    <li><a href="/login">Titres Likés</a></li>
-                    <li><a href="/login">Artistes</a></li>
-                    <li><a href="/login">À propos</a></li>
-                </span>
-                <span class="RightNavNoConnect">
-                    <li><a href="/register" id="inscription">Inscription</a></li>
-                    <li><a href="/login" id="connexion">Connexion</a></li>
-                </span>
-            </ul>
-            <hr>
-        </header>
+    <ul class="UlHeader">
+        <span class="LeftNavNoConnect">
+            <li><a href="/"><img id="Logo" src="https://static.vecteezy.com/system/resources/previews/013/442/219/original/blank-cd-or-dvd-disc-png.png"></a></li>
+            <li><a href="/login">Bibliothèque</a></li>
+            <li><a href="/login">Titres Likés</a></li>
+            <li><a href="/login">Artistes</a></li>
+            <li><a href="/login">À propos</a></li>
+
+            <li class="search-bar">
+                <input type="text" id="search" placeholder="Rechercher...">
+            </li>
+        </span>
+        <span class="RightNavNoConnect">
+            <li><a href="/register" id="inscription">Inscription</a></li>
+            <li><a href="/login" id="connexion">Connexion</a></li>
+        </span>
+    </ul>
+    <hr>
+</header>
     </body>
     </html>
     ';
