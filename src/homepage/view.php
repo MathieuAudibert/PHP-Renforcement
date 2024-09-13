@@ -13,7 +13,7 @@ function view_homepage(array $musiqueList): void
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Audiora</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="src/homepage/style.css">
     </head>
 
     <body>
@@ -50,57 +50,57 @@ function view_homepage(array $musiqueList): void
             </main>
 
             <script>
-                document.getElementById('search').addEventListener('input', function() {
-                    const searchTerm = this.value;
-                    console.log('Search Term:', searchTerm);
+               document.getElementById('search').addEventListener('input', function() {
+    const searchTerm = this.value;
+    console.log('Search Term:', searchTerm);
 
-                    fetch('search.php?search=' + encodeURIComponent(searchTerm))
-                        .then(response => response.text())
-                        .then(text => {
-                            console.log('Server Raw Response:', text);
-                            const musiqueList = document.getElementById('musiqueList');
-                            if (!musiqueList) {
-                                console.error('Element #musiqueList not found');
-                                return;
-                            }
+    fetch('search.php?search=' + encodeURIComponent(searchTerm))
+        .then(response => response.text())
+        .then(text => {
+            console.log('Server Raw Response:', text);
+            const musiqueList = document.getElementById('musiqueList');
+            if (!musiqueList) {
+                console.error('Element #musiqueList not found');
+                return;
+            }
 
-                            musiqueList.innerHTML = '';
+            musiqueList.innerHTML = '';
 
-                            if (text) {
-                                try {
-                                    const data = JSON.parse(text);
-                                    console.log('Parsed Data:', data);
-                                    if (Array.isArray(data) && data.length > 0) {
-                                        data.forEach(musique => {
-                                            const li = document.createElement('li');
-                                            li.classList.add('musique-card');
-                                            li.innerHTML = `
-                                                <h3>Artiste : ${musique.artiste}</h3>
-                                                <p>Titre : ${musique.titre}</p>
-                                                <p>Album : ${musique.album}</p>
-                                                <p>Durée : ${musique.duree}</p>
-                                                <img src="${musique.cover}" alt="Cover de la musique">
-                                                <br>
-                                                <audio controls>
-                                                    <source src="${musique.audioSrc}" type="audio/mpeg">
-                                                    Votre navigateur ne supporte pas l'élément audio.
-                                                </audio>
-                                            `;
-                                            musiqueList.appendChild(li);
-                                        });
-                                    } else {
-                                        console.log('No music found.');
-                                        musiqueList.innerHTML = '<p>Aucune musique trouvée.</p>';
-                                    }
-                                } catch (error) {
-                                    console.error('JSON Parsing Error:', error);
-                                }
-                            }
-                        })
-                        .catch(error => {
-                            console.error('Fetch Error:', error);
+            if (text) {
+                try {
+                    const data = JSON.parse(text);
+                    console.log('Parsed Data:', data);
+                    if (Array.isArray(data) && data.length > 0) {
+                        data.forEach(musique => {
+                            const li = document.createElement('li');
+                            li.classList.add('musique-card');
+                            li.innerHTML = `
+                                <h3>Artiste : ${musique.artiste}</h3>
+                                <p>Titre : ${musique.titre}</p>
+                                <p>Album : ${musique.album}</p>
+                                <img src="${musique.cover}" alt="Cover de la musique">
+                                <br>
+                                <audio controls>
+                                    <source src="${musique.audioSrc}" type="audio/mpeg">
+                                    Votre navigateur ne supporte pas l'élément audio.
+                                </audio>
+                            `;
+                            musiqueList.appendChild(li);
                         });
-                });
+                    } else {
+                        console.log('No music found.');
+                        musiqueList.innerHTML = '<p>Aucune musique trouvée.</p>';
+                    }
+                } catch (error) {
+                    console.error('JSON Parsing Error:', error);
+                }
+            }
+        })
+        .catch(error => {
+            console.error('Fetch Error:', error);
+        });
+});
+
             </script>
         </header>
     </body>

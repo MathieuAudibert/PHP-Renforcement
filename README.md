@@ -39,6 +39,7 @@ Audiora utilise :
     - PHP Server
     - Composer
     - Npm
+- Javascript
 
 >[!WARNING] 
 >Notre Cloud firestore & Cloud Storage est en free-use donc risque d'être limité en taille.

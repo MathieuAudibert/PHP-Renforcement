@@ -11,16 +11,17 @@ $searchTerm = $_GET['search'] ?? '';
 
 function searchMusique(string $searchTerm): array
 {
+    $resultats = [];
+    
     try {
         $firestore = Bdd::getFirestoreClient();
         $musiqueCollection = $firestore->collection('Musiques');
         $images = $musiqueCollection->documents(); 
 
-        $resultats = [];
         foreach ($images as $document) {
             $data = $document->data(); 
 
-            if (isset($data['titre'], $data['artiste'], $data['album'], $data['duree'], $data['cover'], $data['audioSrc'])) {
+            if (isset($data['titre'], $data['artiste'], $data['album'], $data['cover'], $data['audioSrc'])) {
                 $titre = strtolower($data['titre']);
                 $artiste = strtolower($data['artiste']);
                 $album = strtolower($data['album']);
@@ -35,7 +36,6 @@ function searchMusique(string $searchTerm): array
                         'titre' => $data['titre'],
                         'artiste' => $data['artiste'],
                         'album' => $data['album'],
-                        'duree' => $data['duree'],
                         'cover' => $data['cover'],
                         'audioSrc' => $data['audioSrc']
                     ];
