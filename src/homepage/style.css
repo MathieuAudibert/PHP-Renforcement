@@ -203,6 +203,16 @@ main {
   border-radius: 10px;
 }
 
+.musique-card button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  margin: 0 auto;
+  background: none;
+  border: none;
+}
+
 .musique-list li {
   background-color: whitesmoke;
   padding: 20px;

@@ -12,7 +12,7 @@ function model_homepage(): array
         $musiqueCollection = $firestore->collection('Musiques');
         $images = $musiqueCollection->documents();
     } catch (Exception $e) {
-        error_log(message: $e->getMessage(), message_type: 3, destination: '../../utils/logs/errors.log');
+        error_log($e->getMessage(), 3, '../../utils/logs/errors.log');
         echo "Erreur de l'import de musiques";
         return [];
     }
@@ -27,16 +27,20 @@ function model_homepage(): array
     $resultats = [];
     foreach ($images as $document) {
         $data = $document->data();
-        if (isset($data['titre'], $data['artiste'], $data['album'], $data['duree'], $data['cover'])) {
+
+        // Vérifiez que tous les champs requis sont disponibles, y compris la source audio
+        if (isset($data['titre'], $data['artiste'], $data['album'], $data['duree'], $data['cover'], $data['audioSrc'])) {
+            // Ajoutez la source audio lors de la création de l'objet Musique
             $resultats[] = MusiqueFabrique::createMusique(
                 $data['titre'],
                 $data['artiste'],
                 $data['album'],
                 $data['duree'],
-                $data['cover']
+                $data['cover'],
+                $data['audioSrc'] // Ajout de la source audio
             );
         } else {
-            echo "Donnes manquantes : " . $document->id() . "<br>";
+            echo "Données manquantes : " . $document->id() . "<br>";
         }
     }
 
