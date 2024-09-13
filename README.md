@@ -32,6 +32,7 @@ Audiora utilise :
 - PHP
 - Google Firebase
     - Cloud Firestore
+    - Cloud Storage[^2]
 - HTML/CSS
 - Trello
 - Vscode
@@ -40,7 +41,9 @@ Audiora utilise :
     - Npm
 
 >[!WARNING] 
->Notre Cloud firestore est en free-use donc risque d'être limité en taille.
+>Notre Cloud firestore & Cloud Storage est en free-use donc risque d'être limité en taille.
+
+[^2]: Le bucket est inacessible sans autorisations.
 
 ## Installation
 
