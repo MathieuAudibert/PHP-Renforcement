@@ -12,3 +12,4 @@ class MusiqueFabrique
         return new MusiqueConcrete($id, $titre, $artiste, $album, $cover, $audioSrc);
     }
 }
+?>

@@ -8,8 +8,8 @@ require_once __DIR__ . '/view.php';
 function controller_likes(): void
 {
     try {
-        $likedMusics = model_likes(); // Récupération des musiques likées
-        view_likes($likedMusics);     // Affichage de ces musiques dans la vue
+        $likedMusics = model_likes(); 
+        view_likes($likedMusics);     
     } catch (Exception $e) {
         echo "Une erreur s'est produite : " . $e->getMessage();
     }

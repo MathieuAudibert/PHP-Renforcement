@@ -25,17 +25,19 @@ function view_likes(array $likedMusics): void
                 <?php if (!empty($likedMusics)): ?>
                     <?php foreach ($likedMusics as $musique): ?>
                         <li class="musique-card">
-                            <h3>Artiste : <?php echo htmlspecialchars($musique->artiste); ?></h3>
-                            <p>Titre : <?php echo htmlspecialchars($musique->titre); ?></p>
-                            <p>Album : <?php echo htmlspecialchars($musique->album); ?></p>
-                            <img src="<?php echo htmlspecialchars($musique->cover); ?>" alt="Cover de la musique">
+                            <h3>Artiste : <?php echo htmlspecialchars($musique->getArtiste()); ?></h3>
+                            <p>Titre : <?php echo htmlspecialchars($musique->getTitre()); ?></p>
+                            <p>Album : <?php echo htmlspecialchars($musique->getAlbum()); ?></p>
+                            <img src="<?php echo htmlspecialchars($musique->getCover()); ?>" alt="Cover de la musique">
                             <br>
                             <audio controls>
-                                <source src="<?php echo htmlspecialchars($musique->audioSrc); ?>" type="audio/mpeg">
+                                <source src="<?php echo htmlspecialchars($musique->getAudioSrc()); ?>" type="audio/mpeg">
                                 Votre navigateur ne supporte pas l'élément audio.
                             </audio>
                         </li>
                     <?php endforeach; ?>
+                <?php else: ?>
+                    <p>Aucune musique likée.</p>
                 <?php endif; ?>
             </ul>
         </main>
@@ -44,3 +46,4 @@ function view_likes(array $likedMusics): void
     </html>
 <?php
 }
+?>
