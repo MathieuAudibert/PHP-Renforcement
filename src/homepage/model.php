@@ -28,16 +28,14 @@ function model_homepage(): array
     foreach ($images as $document) {
         $data = $document->data();
 
-        // Vérifiez que tous les champs requis sont disponibles, y compris la source audio
         if (isset($data['titre'], $data['artiste'], $data['album'], $data['duree'], $data['cover'], $data['audioSrc'])) {
-            // Ajoutez la source audio lors de la création de l'objet Musique
             $resultats[] = MusiqueFabrique::createMusique(
                 $data['titre'],
                 $data['artiste'],
                 $data['album'],
                 $data['duree'],
                 $data['cover'],
-                $data['audioSrc'] // Ajout de la source audio
+                $data['audioSrc'] 
             );
         } else {
             echo "Données manquantes : " . $document->id() . "<br>";

@@ -9,7 +9,7 @@ abstract class Musique
     protected $album;
     protected $cover;
     protected $duree;
-    protected $audioSrc; // Ajout de la propriété audioSrc
+    protected $audioSrc; 
 
     public function __construct($titre, $artiste, $album, $duree, $cover, $audioSrc)
     {
@@ -18,7 +18,7 @@ abstract class Musique
         $this->album = $album;
         $this->duree = $duree;
         $this->cover = $cover;
-        $this->audioSrc = $audioSrc; // Initialisation de la source audio
+        $this->audioSrc = $audioSrc; 
     }
 
     public function getTitre()

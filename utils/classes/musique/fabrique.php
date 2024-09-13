@@ -9,6 +9,6 @@ class MusiqueFabrique
 {
     public static function createMusique($titre, $artiste, $album, $duree, $cover, $audioSrc): Musique
     {
-        return new MusiqueConcrete($titre, $artiste, $album, $duree, $cover, $audioSrc); // Ajout de l'audioSrc
+        return new MusiqueConcrete($titre, $artiste, $album, $duree, $cover, $audioSrc);
     }
 }
