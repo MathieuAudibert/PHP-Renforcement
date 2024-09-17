@@ -92,7 +92,7 @@ Notre site est non lucratif et a pour but de faire découvrir des artistes a nos
 
 Vous pouvez sans vous inscrire écouter, ressentir et vibrer sur la musique que nous vous proposons **GRATUITEMENT** ! 
 
-[](C:\Users\Mathieu\Pictures\caca\phprenforcement\PHP-Renforcement\public\ListedesMusiques-GoogleChrome2024-09-1719-33-35-ezgif.com-video-to-gif-converter.gif)
+<img src="https://s11.gifyu.com/images/SApxB.gif" width="40" height="40" />
 
 **Inscrit** :
 
