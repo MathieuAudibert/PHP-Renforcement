@@ -24,6 +24,9 @@ function route_request(): void
             case '/':
                 controller_homepage();
                 break;
+            case '/index.php':
+                controller_homepage();
+                break;
             case '/login':
                 controller_login();
                 break;
