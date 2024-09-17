@@ -43,7 +43,7 @@ function model_register()
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $user = createUser();
             header("Location: /login");
-            exit(); // Ensure no further code is executed after redirection
+            exit(); 
         }
     } catch (Exception $e) {
         echo "Erreur lors de l'inscription : " . $e->getMessage();

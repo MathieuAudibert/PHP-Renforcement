@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 function view_about(): void
 {
-    include('header.php'); // garde ta barre de navigation intacte
+    include('header.php');
 ?>
     <!DOCTYPE html>
     <html lang="fr-FR" dir="ltr">
@@ -13,7 +13,7 @@ function view_about(): void
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Audiora - À propos</title>
-        <!-- Importation du fichier CSS existant -->
+
         <link rel="stylesheet" href="src/about/style.css">
     </head>
 

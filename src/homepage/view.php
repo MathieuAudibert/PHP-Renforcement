@@ -55,7 +55,7 @@ function view_homepage(array $musiqueList): void
             document.addEventListener('DOMContentLoaded', function() {
                 const buttons = document.querySelectorAll('.like-button');
 
-                console.log(buttons); // Vérifie si les boutons sont bien sélectionnés
+                console.log(buttons); 
 
                 buttons.forEach(button => {
                     if (button) {
@@ -66,7 +66,7 @@ function view_homepage(array $musiqueList): void
                             const isLiked = img.getAttribute('src') === 'https://i.ibb.co/nnL137v/empty-heart.png';
 
                             if (isLiked) {
-                                img.setAttribute('src', 'https://i.ibb.co/YBnndfP/full-heart.png'); // Lien de l'image pleine
+                                img.setAttribute('src', 'https://i.ibb.co/YBnndfP/full-heart.png');
                                 fetch('/src/likes/like_music.php', {
                                         method: 'POST',
                                         headers: {

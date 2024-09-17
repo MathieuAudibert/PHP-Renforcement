@@ -9,7 +9,6 @@ function model_likes(): array
 {
     try {
         $firestore = Bdd::getFirestoreClient();
-        // Requête pour récupérer uniquement les musiques qui sont likées
         $musiqueCollection = $firestore->collection('Musiques');
         $likedMusics = $musiqueCollection->where('liked', '=', true)->documents();
     } catch (Exception $e) {
@@ -27,9 +26,8 @@ function model_likes(): array
     foreach ($likedMusics as $document) {
         $data = $document->data();
         if (isset($data['titre'], $data['artiste'], $data['album'], $data['cover'], $data['audioSrc'])) {
-            // Ajout de l'ID du document à la création de la musique
             $resultats[] = MusiqueFabrique::createMusique(
-                $document->id(),   // Ajout de l'ID du document Firestore
+                $document->id(),  
                 $data['titre'],
                 $data['artiste'],
                 $data['album'],

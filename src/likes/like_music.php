@@ -13,11 +13,9 @@ if (isset($input['id'])) {
     $musicId = $input['id'];
 
     try {
-        // Connexion à Firestore
         $firestore = Bdd::getFirestoreClient();
         $musiqueCollection = $firestore->collection('Musiques');
 
-        // Met à jour la musique pour définir 'liked' à true
         $documentReference = $musiqueCollection->document($musicId);
         $documentSnapshot = $documentReference->snapshot();
 
@@ -27,17 +25,14 @@ if (isset($input['id'])) {
             ]);
             echo json_encode(['status' => 'success', 'message' => 'Musique likée']);
         } else {
-            // Musique non trouvée
             http_response_code(404);
             echo json_encode(['status' => 'error', 'message' => 'Musique non trouvée']);
         }
     } catch (Exception $e) {
-        // Retourne une réponse d'erreur avec le message détaillé
         http_response_code(500);
         echo json_encode(['status' => 'error', 'message' => $e->getMessage()]);
     }
 } else {
-    // Si l'ID est manquant dans la requête
     http_response_code(400);
     echo json_encode(['status' => 'error', 'message' => 'ID de musique manquant']);
 }

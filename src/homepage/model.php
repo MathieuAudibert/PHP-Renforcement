@@ -28,9 +28,8 @@ function model_homepage(): array
     foreach ($documents as $document) {
         $data = $document->data();
         if (isset($data['titre'], $data['artiste'], $data['album'], $data['cover'], $data['audioSrc'])) {
-            // Passer l'ID du document à la fabrique
             $resultats[] = MusiqueFabrique::createMusique(
-                $document->id(), // ID du document Firestore
+                $document->id(), 
                 $data['titre'],
                 $data['artiste'],
                 $data['album'],

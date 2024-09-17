@@ -28,7 +28,6 @@ function loginUser($email, $password)
     foreach ($documents as $document) {
         $user = $document->data();
         if (password_verify($password, $user['password'])) {
-            // Démarrer une session et stocker les informations de l'utilisateur
             session_start();
             $_SESSION['user'] = $user;
             header('Location: /');
