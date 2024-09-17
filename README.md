@@ -66,7 +66,7 @@ extension=php_grpc.dll
 extension=php_protobuf.dll
 ```
 
->[!DANGER]
+>[!DANGER]\
 >Votre version de php peut différer de la notre ce qui pourrai expliquer les problemes liés a grpc & protobuf. Verifiez que votre version php (nous utilisons 8.2) soit inférieur a 8.2.
 
 Une fois cela fait, clonez le dépot et lancez les commandes suivantes dans le terminal : 
@@ -117,7 +117,7 @@ Nos utilisateurs ont aussi acccès a une brève description des artistes dans la
 # Vision
 
 Cette section regroupe ce que nous souhaitions mettre en place durant ce projet mais qui n'a malheuresement (faute de temps) pu aboutir : 
-- 
+- Ajouter une github action pour formatter le CSS (bonus)
 
 # Contact
 
