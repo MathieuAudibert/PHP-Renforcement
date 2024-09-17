@@ -92,7 +92,7 @@ Notre site est non lucratif et a pour but de faire découvrir des artistes a nos
 
 Vous pouvez sans vous inscrire écouter, ressentir et vibrer sur la musique que nous vous proposons **GRATUITEMENT** ! 
 
-[gif](https://s11.gifyu.com/images/SApxB.gif)
+[](https://s11.gifyu.com/images/SApxB.gif)
 
 **Inscrit** :
 
