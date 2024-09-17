@@ -34,6 +34,9 @@ function header_connected($nom, $prenom)
                     <li><a href="/artists">Artistes</a></li>
                     <li><a href="/about">À propos</a></li>
                 </span>
+                <li class="search-bar">
+                <input type="text" id="search" placeholder="Rechercher...">
+            </li>
                 <span class=RightNavNoConnect> 
                         <li class="user-name">' . htmlspecialchars($prenom) . '</li>
                         <li> <a href=/logout ><img id=Theme src=https://i.ibb.co/S77z1XY/icons8-logout-48.png> </a></li>
@@ -65,7 +68,7 @@ function header_noConnect()
             <li><a href="/"><img id="Logo" src="https://static.vecteezy.com/system/resources/previews/013/442/219/original/blank-cd-or-dvd-disc-png.png"></a></li>
             <li><a href="/login">Titres Likés</a></li>
             <li><a href="/login">Artistes</a></li>
-            <li><a href="/login">À propos</a></li>
+            <li><a href="/about">À propos</a></li>
 
             <li class="search-bar">
                 <input type="text" id="search" placeholder="Rechercher...">
