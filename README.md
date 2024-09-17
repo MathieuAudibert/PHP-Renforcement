@@ -96,7 +96,7 @@ Notre site est non lucratif et a pour but de faire découvrir des artistes a nos
 
 Vous pouvez sans vous inscrire écouter, ressentir et vibrer sur la musique que nous vous proposons **GRATUITEMENT** ! 
 
-<img src="https://s11.gifyu.com/images/SApxB.gif"/>
+<img src="https://s11.gifyu.com/images/SApxB.gif" text-align="center"/>
 
 Mais ce n'est pas tout, en effet, nous souhaitons que les artistes que nous mettons en avant gagne d'avantage d'auditeurs c'est pourquoi vous pouvez (toujours sans inscription requise) **TELECHARGER** la musique pour l'écouter hors ligne ou bien faire la propagande vous-meme !
 
