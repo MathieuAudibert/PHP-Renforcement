@@ -88,6 +88,12 @@ Le site est simple d'utilisation car il se divise en 2 experiences :
 
 **Non Inscrit** :
 
+Notre site est non lucratif et a pour but de faire découvrir des artistes a nos utilisateurs et pour cela, nous limitons l'experience utilisateur (non connécté) aux titres likés et les pages descriptives des artistes. 
+
+Vous pouvez sans vous inscrire écouter, ressentir et vibrer sur la musique que nous vous proposons **GRATUITEMENT** ! 
+
+[gif](https://s11.gifyu.com/images/SApxB.gif)
+
 **Inscrit** :
 
 # Contact
