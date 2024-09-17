@@ -96,11 +96,15 @@ Notre site est non lucratif et a pour but de faire découvrir des artistes a nos
 
 Vous pouvez sans vous inscrire écouter, ressentir et vibrer sur la musique que nous vous proposons **GRATUITEMENT** ! 
 
-<img src="https://s11.gifyu.com/images/SApxB.gif" text-align="center"/>
+<div style="text-align: center;">
+  <img src="https://s11.gifyu.com/images/SApxB.gif"/>
+</div>
 
 Mais ce n'est pas tout, en effet, nous souhaitons que les artistes que nous mettons en avant gagne d'avantage d'auditeurs c'est pourquoi vous pouvez (toujours sans inscription requise) **TELECHARGER** la musique pour l'écouter hors ligne ou bien faire la propagande vous-meme !
 
-<img src="https://s11.gifyu.com/images/SApK1.gif"/>
+<div style="text-align: center;">
+    <img src="https://s11.gifyu.com/images/SApK1.gif"/>
+</div>
 
 Vous avez aussi accès a une page a propos qui détaille notre projet ! 🚀
 
@@ -110,7 +114,9 @@ Dans un premier temps, notre application sécurise vos données en protégeant v
 
 Notre application offre de nombreux avantages supplémentaires pour les utilisateurs inscrits notamment le fait de liker des titres 
 
-<img src="https://s1.gifyu.com/images/SApNX.gif"/>
+<div style="text-align: center;">
+    <img src="https://s1.gifyu.com/images/SApNX.gif"/>
+</div>
 
 Nos utilisateurs ont aussi acccès a une brève description des artistes dans la page artistes afin d'en apprendre plus sur leurs nouveaux artistes préférés !
   
