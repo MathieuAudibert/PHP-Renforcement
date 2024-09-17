@@ -66,7 +66,7 @@ function view_homepage(array $musiqueList): void
                             const isLiked = img.getAttribute('src') === 'https://i.ibb.co/nnL137v/empty-heart.png';
 
                             if (isLiked) {
-                                img.setAttribute('src', 'https://i.ibb.co/YBnndfP/full-heart.png');
+                                img.setAttribute('src', 'https://i.ibb.co/x51Hbmq/image.png');
                                 fetch('/src/likes/like_music.php', {
                                         method: 'POST',
                                         headers: {

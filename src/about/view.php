@@ -50,7 +50,7 @@ function view_about(): void
                 </ul>
 
                 <p>
-                    Le code source du projet est disponible sur 
+                    Le code source du projet est disponible sur notre
                     <a href="https://github.com/MathieuAudibert/PHP-Renforcement" target="_blank">Github</a>.
                 </p>
 
