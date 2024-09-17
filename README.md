@@ -14,6 +14,7 @@ Nous devions utiliser les technologies listées dans : [Configuration](#configur
     - [Configuration](#configuration-requise)
     - [Installation](#installation)
     - [Utilisation](#utilisation)
+- [Vision](#vision)
 - [Contact](#contact)
 
 # Fonctionnalités
@@ -88,13 +89,32 @@ Le site est simple d'utilisation car il se divise en 2 experiences :
 
 **Non Inscrit** :
 
-Notre site est non lucratif et a pour but de faire découvrir des artistes a nos utilisateurs et pour cela, nous limitons l'experience utilisateur (non connécté) aux titres likés et les pages descriptives des artistes. 
+Notre site est non lucratif et a pour but de faire découvrir des artistes a nos utilisateurs et pour cela, nous limitons l'experience utilisateur (non inscrit) aux titres likés et les pages descriptives des artistes. 
 
 Vous pouvez sans vous inscrire écouter, ressentir et vibrer sur la musique que nous vous proposons **GRATUITEMENT** ! 
 
 <img src="https://s11.gifyu.com/images/SApxB.gif"/>
 
+Mais ce n'est pas tout, en effet, nous souhaitons que les artistes que nous mettons en avant gagne d'avantage d'auditeurs c'est pourquoi vous pouvez (toujours sans inscription requise) **TELECHARGER** la musique pour l'écouter hors ligne ou bien faire la propagande vous-meme !
+
+<img src="https://s11.gifyu.com/images/SApK1.gif"/>
+
+Vous avez aussi accès a une page a propos qui détaille notre projet ! 🚀
+
 **Inscrit** :
+
+Dans un premier temps, notre application sécurise vos données en protégeant vos informations de connexion. 
+
+Notre application offre de nombreux avantages supplémentaires pour les utilisateurs inscrits notamment le fait de liker des titres 
+
+<img src="https://s1.gifyu.com/images/SApNX.gif"/>
+
+Nos utilisateurs ont aussi acccès a une brève description des artistes dans la page artistes afin d'en apprendre plus sur leurs nouveaux artistes préférés !
+  
+# Vision
+
+Cette section regroupe ce que nous souhaitions mettre en place durant ce projet mais qui n'a malheuresement (faute de temps) pu aboutir : 
+- 
 
 # Contact
 
