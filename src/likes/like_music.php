@@ -3,6 +3,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+session_start(); 
+
 header('Content-Type: application/json');
 
 require_once __DIR__ . '/../../utils/bdd.php';
@@ -13,6 +15,13 @@ if (isset($input['id'])) {
     $musicId = $input['id'];
 
     try {
+        if (isset($_SESSION['liked_musics']) && in_array($musicId, $_SESSION['liked_musics'])) {
+            echo json_encode(['status' => 'success', 'message' => 'Musique déjà likée dans cette session']);
+            exit;
+        }
+
+        $_SESSION['liked_musics'][] = $musicId;
+
         $firestore = Bdd::getFirestoreClient();
         $musiqueCollection = $firestore->collection('Musiques');
 
