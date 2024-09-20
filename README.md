@@ -124,6 +124,7 @@ Nos utilisateurs ont aussi acccès a une brève description des artistes dans la
 
 Cette section regroupe ce que nous souhaitions mettre en place durant ce projet mais qui n'a malheuresement (faute de temps) pu aboutir : 
 - Ajouter une github action pour formatter le CSS (bonus)
+- Faire une page artiste avec tous nos artistes et un descriptif
 
 # Contact
 
